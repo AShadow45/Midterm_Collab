@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
+  maxHealth: 10
 --- !u!212 &825542918
 SpriteRenderer:
   m_ObjectHideFlags: 0

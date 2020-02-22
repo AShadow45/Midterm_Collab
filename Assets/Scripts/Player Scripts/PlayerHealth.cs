@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     public int currentHealth;
-    int maxHealth;
+    public int maxHealth;
     float EndDelay = .1f;
 
     void Start()
