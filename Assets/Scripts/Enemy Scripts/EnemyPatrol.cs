@@ -55,7 +55,7 @@ public class EnemyPatrol : MonoBehaviour
         Vector2 newposition = transform.position;
         yPos += ySpeed;
         newposition.x += xSpeed * xDirect * Time.deltaTime;
-        newposition.y = Mathf.Sin(yPos) * .04f + yStartPos;
+       // newposition.y = Mathf.Sin(yPos) * .04f + yStartPos;
         transform.position = newposition;
     }
 }
