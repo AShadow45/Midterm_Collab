@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
 
-       // healthUI.fillAmount = currentHealth / maxHealth;
+        healthUI.fillAmount = currentHealth / maxHealth;
     }
 
     public void Damage(int dmg) {
