@@ -27,15 +27,7 @@ public class EnemyChase : MonoBehaviour
     
     void Update()
     {
-        //if(target.position.x < 0)
-        //{
-        //    transform.localRotation = Quaternion.Euler(0, 0, 0);
-        //}
-        //else if (target.position.x > 0)
-        //{
-        //    transform.localRotation = Quaternion.Euler(0, 180, 0);
-        //}
-
+        
         //.................................................CHASE
         distVal = Vector3.Distance(transform.position, target.position);
         if (distVal < 10f)
