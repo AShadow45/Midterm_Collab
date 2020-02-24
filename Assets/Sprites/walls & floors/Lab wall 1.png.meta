@@ -128,18 +128,18 @@ TextureImporter:
       name: Lab wall 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 290
         y: 311
-        width: 800
+        width: 193
         height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 290, y: 0, z: 317, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fd6e079526b7e942bcdc7fbc810e7e2
+      spriteID: f0b618c7f85eeae4598bc44be88a4426
       internalID: -2200991061999710223
       vertices: []
       indices: 
