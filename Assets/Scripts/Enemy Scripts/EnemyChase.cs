@@ -22,18 +22,19 @@ public class EnemyChase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player");
+        InvokeRepeating("Seek", 0, .2f);
     }
     
     void Update()
     {
-        if(target.position.x < 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if (target.position.x > 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
+        //if(target.position.x < 0)
+        //{
+        //    transform.localRotation = Quaternion.Euler(0, 0, 0);
+        //}
+        //else if (target.position.x > 0)
+        //{
+        //    transform.localRotation = Quaternion.Euler(0, 180, 0);
+        //}
 
         //.................................................CHASE
         distVal = Vector3.Distance(transform.position, target.position);
@@ -50,6 +51,16 @@ public class EnemyChase : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             damage.currentHealth -= 1;
+        }
+    }
+
+    void Seek()
+    {
+        playerInco = Physics2D.OverlapCircle(transform.position, 12, playerLayer);
+        if (playerInco)
+        {
+            rb.velocity *= .5f;
+            transform.up = playerInco.transform.position - transform.position;
         }
     }
 }
