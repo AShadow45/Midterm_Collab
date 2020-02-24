@@ -22,7 +22,7 @@ public class EnemyChase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player");
-        InvokeRepeating("Seek", 0, .2f);
+        InvokeRepeating("Seek", 0, .1f);
     }
     
     void Update()
@@ -32,10 +32,10 @@ public class EnemyChase : MonoBehaviour
         distVal = Vector3.Distance(transform.position, target.position);
         if (distVal < 10f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
 
-        playerInco = Physics2D.OverlapCircle(transform.position, 11f, playerLayer);
+        //playerInco = Physics2D.OverlapCircle(transform.position, 11f, playerLayer);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -48,10 +48,10 @@ public class EnemyChase : MonoBehaviour
 
     void Seek()
     {
-        playerInco = Physics2D.OverlapCircle(transform.position, 12, playerLayer);
+        playerInco = Physics2D.OverlapCircle(transform.position, 6, playerLayer);
         if (playerInco)
         {
-            rb.velocity *= .5f;
+            rb.velocity = transform.up * 5f;
             transform.up = playerInco.transform.position - transform.position;
         }
     }
