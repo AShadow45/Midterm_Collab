@@ -12,19 +12,15 @@ public class PButton : MonoBehaviour
         openMenu = false;
     }
     
-    void Update()
-    {
+    void Update() {
         if (openMenu)
         {
-            PauseMenu.SetActive(true);
-        } else
-        {
-            PauseMenu.SetActive(false);
-            openMenu = false;
+            
         }
     }
 
     public void Pause() {
         openMenu = true;
+        PauseMenu.SetActive(true);
     }
 }
