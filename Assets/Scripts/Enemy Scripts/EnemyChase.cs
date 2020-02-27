@@ -27,15 +27,8 @@ public class EnemyChase : MonoBehaviour
     
     void Update()
     {
-        
         //.................................................CHASE
         distVal = Vector3.Distance(transform.position, target.position);
-        if (distVal < 10f)
-        {
-            //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
-
-        //playerInco = Physics2D.OverlapCircle(transform.position, 11f, playerLayer);
     }
 
     void OnTriggerEnter2D(Collider2D col)
