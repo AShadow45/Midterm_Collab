@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyChase : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float speed;
 
     //....................................................CHASE
     [Header("Chase Settings")]
+    public float speed;
     GameObject player;
     Collider2D playerInco;
     public LayerMask playerLayer;
@@ -47,9 +47,12 @@ public class EnemyChase : MonoBehaviour
         }
     }
 
+    void OverlapCheck() {
+        playerInco = Physics2D.OverlapCircle(transform.position, detectRad, playerLayer);
+    }
+
     void Seek()
     {
-        playerInco = Physics2D.OverlapCircle(transform.position, detectRad, playerLayer);
         if (playerInco)
         {
             rb.velocity = transform.up * speed;
