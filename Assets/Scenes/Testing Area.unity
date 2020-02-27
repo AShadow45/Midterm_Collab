@@ -154,7 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bb_curHealth: 0
   bb_maxHealth: 0
+  bb_Minion_maxHealth: 3
   Minions: {fileID: 0}
+  maxNUM_Minions: 5
 --- !u!50 &275588655
 Rigidbody2D:
   serializedVersion: 4

@@ -17,11 +17,15 @@ public class BigBoss_Controls : MonoBehaviour
     public int bb_curHealth;
     [Tooltip("Big Boss Maximum Health")]
     public int bb_maxHealth;
+    [Tooltip("Minion Maximum Health")]
+    public int bb_Minion_maxHealth = 3;
 
     //.........................................SPAWNING ENEMIES
     [Header("Spawn Settings")]
     public GameObject Minions;
-    int maxNUM_Minions = 5; //Max number of minions on screen
+    [Tooltip("Max Number of Minions on Screen")]
+    public int maxNUM_Minions = 5;
+    float spawnRate_Minions; // Delay between minions spawning
 
     void Start()
     {
