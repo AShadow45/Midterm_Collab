@@ -2554,7 +2554,7 @@ PrefabInstance:
     - target: {fileID: 2322966659304628421, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_Name
-      value: blackout
+      value: black_blocker
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
