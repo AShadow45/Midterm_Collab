@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1878af1c5cf0b34593c8bfacdc12536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bb_curHealth: 0
+  bb_maxHealth: 0
+  Minions: {fileID: 0}
 --- !u!50 &275588655
 Rigidbody2D:
   serializedVersion: 4
@@ -549,6 +552,7 @@ GameObject:
   - component: {fileID: 1598835112}
   - component: {fileID: 1598835111}
   - component: {fileID: 1598835110}
+  - component: {fileID: 1598835115}
   m_Layer: 0
   m_Name: Mini Boss
   m_TagString: Enemy
@@ -568,9 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc9998433660304da2761cc0071534a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  speed: 2
   Webs: {fileID: 5199364906187732202, guid: ce5a2a4cd04464a438afc1d86631f0c4, type: 3}
   mb_curHealth: 0
   mb_maxHealth: 0
@@ -587,7 +589,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -684,6 +686,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598835115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598835109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  detectRad: 4
 --- !u!1 &1661765199
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,10 +765,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  damage: {fileID: 825542917}
+  detectRad: 6
 --- !u!61 &2047576126
 BoxCollider2D:
   m_ObjectHideFlags: 0

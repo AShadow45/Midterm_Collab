@@ -5,17 +5,8 @@ using UnityEngine;
 public class MiniBoss_Controls : MonoBehaviour
 {
     Rigidbody2D rb;
-    float speed;
+    public float speed;
    
-    //.....................................................CHASE
-    [Header("Chase Settings")]
-    GameObject player;
-    Collider2D playerInco;
-    public LayerMask playerLayer;
-
-    float distVal;
-    Transform target;
-
     //.....................................................ATTACK
     [Header("Attack Settings")]
     public GameObject Webs;
@@ -30,25 +21,15 @@ public class MiniBoss_Controls : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
     
     void Update()
     {
-        distVal = Vector3.Distance(transform.position, target.position);
+        
+        
     }
-
-    //.....................................................CHASE
-    void Seek() {
-        playerInco = Physics2D.OverlapCircle(transform.position, 4, playerLayer);
-        if (playerInco)
-        {
-            rb.velocity = transform.up * 2f;
-            transform.up = playerInco.transform.position - transform.position;
-        }
-    }
-
+    
     //......................................................ATTACK
     void Damage() {
         

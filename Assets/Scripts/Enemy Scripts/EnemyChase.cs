@@ -5,46 +5,55 @@ using UnityEngine;
 public class EnemyChase : MonoBehaviour
 {
     Rigidbody2D rb;
-    GameObject player;
-    float speed;
+    public float speed;
 
+    //....................................................CHASE
+
+    [Header("Chase Settings")]
+    GameObject player;
     Collider2D playerInco;
     public LayerMask playerLayer;
 
-    public PlayerHealth damage;
-
-    //....................................................CHASE
     float distVal;
     Transform target;
+
+    bool isChasing;
+    public float detectRad;
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player");
-        InvokeRepeating("Seek", 0, .1f);
+        target = player.transform;
     }
     
     void Update()
     {
         //.................................................CHASE
         distVal = Vector3.Distance(transform.position, target.position);
-    }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
+        if (!isChasing && distVal <= detectRad)
         {
-            damage.currentHealth -= 1;
+            isChasing = true;
+            Seek();
+        }
+        else if (isChasing && distVal <= detectRad)
+        {
+            Seek();
+        }
+        else if (isChasing && distVal > detectRad)
+        {
+            isChasing = false;
         }
     }
 
     void Seek()
     {
-        playerInco = Physics2D.OverlapCircle(transform.position, 6, playerLayer);
+        playerInco = Physics2D.OverlapCircle(transform.position, detectRad, playerLayer);
         if (playerInco)
         {
-            rb.velocity = transform.up * 5f;
+            rb.velocity = transform.up * speed;
             transform.up = playerInco.transform.position - transform.position;
         }
     }

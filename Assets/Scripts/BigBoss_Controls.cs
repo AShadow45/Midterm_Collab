@@ -8,7 +8,7 @@ public class BigBoss_Controls : MonoBehaviour
     float speed;
 
     //.........................................ATTACK
-    [Header("Attack Settings")]
+   // [Header("Attack Settings")]
 
 
     //.........................................HEALTH
@@ -21,6 +21,7 @@ public class BigBoss_Controls : MonoBehaviour
     //.........................................SPAWNING ENEMIES
     [Header("Spawn Settings")]
     public GameObject Minions;
+    int maxNUM_Minions = 5; //Max number of minions on screen
 
     void Start()
     {
