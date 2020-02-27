@@ -4,49 +4,32 @@ using UnityEngine;
 
 public class blackOutFade : MonoBehaviour
 {
-    
-    public Renderer blackSpriteRend;
-    /*
-    Color col;
+    public GameObject blackOut;
+    private Renderer blackSpriteRend;
 
     void Start()
     {
-        col = blackSpriteRend.material.color;
+        blackOut.SetActive(true);
+        blackSpriteRend = blackOut.GetComponent<Renderer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            if (col.a > 0) {
-                col.a -= 0.1f * Time.deltaTime;
-                blackSpriteRend.material.color = col;
-             }
+            StartCoroutine(FadeTo(0.0f, 1.5f));
+        }
+
+    }
+        IEnumerator FadeTo(float aValue, float aTime)
+    {
+        float alpha = blackSpriteRend.material.color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+           blackSpriteRend.material.color = newColor;
+            yield return null;
         }
     }
-    */
-    
-        public float minimum = 0.0f;
-        public float maximum = 1f;
-        public float duration = 3.0f;
-        private float startTime;
-        public SpriteRenderer sprite;
-        void Start()
-        {
-            startTime = Time.time;
-        }
-        void Update()
-        {
-            float t = (Time.time - startTime) / duration;
-            sprite.color = new Color(0f, 0f, 0f, Mathf.SmoothStep(maximum, minimum, t));
-        }
 
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Player"))
-            {
-
-            }
-        }
-  
 }

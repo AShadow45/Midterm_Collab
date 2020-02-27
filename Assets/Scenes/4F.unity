@@ -363,11 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23aa5a9ded88c1c468f11ceb0c57b3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackSpriteRend: {fileID: 0}
-  minimum: 0
-  maximum: 1
-  duration: 5
-  sprite: {fileID: 289026367}
+  blackOut: {fileID: 289026366}
+  blackSpriteRend: {fileID: 289026367}
 --- !u!1 &104056268
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +977,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84, y: 8.98}
   m_EdgeRadius: 0
+--- !u!1 &289026366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2322966659304628421, guid: 9c69ddb7312b1c2418ee89c103adfa01,
+    type: 3}
+  m_PrefabInstance: {fileID: 5539851559906083452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!212 &289026367 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 6069547333115524334, guid: 9c69ddb7312b1c2418ee89c103adfa01,
@@ -4156,7 +4159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ec49aadc3a4483a4893763ef68845926, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5554,6 +5557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: blackout
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322966659304628421, guid: 9c69ddb7312b1c2418ee89c103adfa01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
