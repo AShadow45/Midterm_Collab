@@ -364,7 +364,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackOut: {fileID: 289026366}
-  blackSpriteRend: {fileID: 289026367}
 --- !u!1 &104056268
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +836,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.36936235, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -848,7 +847,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.24, y: 4.21}
+  m_Size: {x: 2.501275, y: 4.21}
   m_EdgeRadius: 0
 --- !u!114 &204678642
 MonoBehaviour:
@@ -980,12 +979,6 @@ BoxCollider2D:
 --- !u!1 &289026366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2322966659304628421, guid: 9c69ddb7312b1c2418ee89c103adfa01,
-    type: 3}
-  m_PrefabInstance: {fileID: 5539851559906083452}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &289026367 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6069547333115524334, guid: 9c69ddb7312b1c2418ee89c103adfa01,
     type: 3}
   m_PrefabInstance: {fileID: 5539851559906083452}
   m_PrefabAsset: {fileID: 0}
@@ -5566,7 +5559,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.48
+      value: 24.4614
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
@@ -5621,7 +5614,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 27.147655
+      value: 27.185661
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}

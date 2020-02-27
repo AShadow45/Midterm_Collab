@@ -17,7 +17,7 @@ public class blackOutFade : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(FadeTo(0.0f, 1.5f));
+            StartCoroutine(FadeTo(0.0f, 2f));
         }
 
     }
