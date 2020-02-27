@@ -572,7 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc9998433660304da2761cc0071534a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
   Webs: {fileID: 5199364906187732202, guid: ce5a2a4cd04464a438afc1d86631f0c4, type: 3}
   mb_curHealth: 0
   mb_maxHealth: 0
@@ -701,7 +700,7 @@ MonoBehaviour:
   speed: 2
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   detectRad: 4
 --- !u!1 &1661765199
 GameObject:

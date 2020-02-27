@@ -8,7 +8,6 @@ public class EnemyChase : MonoBehaviour
     public float speed;
 
     //....................................................CHASE
-
     [Header("Chase Settings")]
     GameObject player;
     Collider2D playerInco;

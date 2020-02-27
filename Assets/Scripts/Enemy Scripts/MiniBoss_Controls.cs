@@ -5,8 +5,7 @@ using UnityEngine;
 public class MiniBoss_Controls : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float speed;
-   
+  
     //.....................................................ATTACK
     [Header("Attack Settings")]
     public GameObject Webs;
