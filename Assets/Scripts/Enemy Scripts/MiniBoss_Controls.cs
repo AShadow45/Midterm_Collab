@@ -48,4 +48,9 @@ public class MiniBoss_Controls : MonoBehaviour
             transform.up = playerInco.transform.position - transform.position;
         }
     }
+
+    //......................................................ATTACK
+    void Damage() {
+        
+    }
 }
