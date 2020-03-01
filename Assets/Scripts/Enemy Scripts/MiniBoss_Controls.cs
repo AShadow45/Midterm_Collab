@@ -17,6 +17,7 @@ public class MiniBoss_Controls : MonoBehaviour
     [Tooltip("Mini Boss Maximum Health")]
     public int mb_maxHealth;
 
+    //.....................................................STAIRWAY 
     [Header("Spider Web")]
     public GameObject spiderWeb;
     public Collider2D webCollider;
