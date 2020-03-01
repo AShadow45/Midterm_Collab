@@ -17,6 +17,10 @@ public class MiniBoss_Controls : MonoBehaviour
     [Tooltip("Mini Boss Maximum Health")]
     public int mb_maxHealth;
 
+    [Header("Spider Web")]
+    public GameObject spiderWeb;
+    public Collider2D webCollider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,12 +29,28 @@ public class MiniBoss_Controls : MonoBehaviour
     
     void Update()
     {
-        
+        if (mb_curHealth <= 0)
+        {
+            StartCoroutine(FadeTo(0.0f, 1.5f));
+            webCollider.enabled = false;
+        }
         
     }
     
     //......................................................ATTACK
     void Damage() {
         
+    }
+
+    //spider web fade
+    IEnumerator FadeTo(float aValue, float aTime)
+    {
+        float alpha = spiderWeb.GetComponent<Renderer>().material.color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            spiderWeb.GetComponent<Renderer>().material.color = newColor;
+            yield return null;
+        }
     }
 }
