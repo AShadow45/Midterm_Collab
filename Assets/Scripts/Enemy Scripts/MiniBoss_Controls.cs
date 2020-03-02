@@ -15,7 +15,7 @@ public class MiniBoss_Controls : MonoBehaviour
     [Tooltip("Mini Boss Current Health")]
     public int mb_curHealth;
     [Tooltip("Mini Boss Maximum Health")]
-    public int mb_maxHealth;
+    public int mb_maxHealth = 5; 
 
     //.....................................................STAIRWAY 
     [Header("Spider Web")]
@@ -25,6 +25,7 @@ public class MiniBoss_Controls : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        mb_curHealth = mb_maxHealth;
         
     }
     
@@ -37,8 +38,17 @@ public class MiniBoss_Controls : MonoBehaviour
         }
         
     }
-    
+
     //......................................................ATTACK
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Bat")
+        {
+            mb_curHealth -= 1;
+        }
+    }
+
     void Damage() {
         
     }
