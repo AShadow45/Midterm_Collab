@@ -800,11 +800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  detectRad: 6
+  detectRad: 5
 --- !u!50 &165612871
 Rigidbody2D:
   serializedVersion: 4
@@ -6513,11 +6513,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  detectRad: 6
+  detectRad: 5
 --- !u!50 &1496121226
 Rigidbody2D:
   serializedVersion: 4
@@ -8607,11 +8607,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
-  detectRad: 6
+  detectRad: 5
 --- !u!50 &2105882970
 Rigidbody2D:
   serializedVersion: 4

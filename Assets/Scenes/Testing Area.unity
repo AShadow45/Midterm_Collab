@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 1577650783}
   - component: {fileID: 1577650782}
   - component: {fileID: 1577650781}
+  - component: {fileID: 1577650785}
   m_Layer: 0
   m_Name: 'Tank Enemy '
   m_TagString: Enemy
@@ -873,12 +874,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577650780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.27, y: 2.41, z: 0}
+  m_LocalPosition: {x: 4.753, y: -0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577650785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577650780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  damage: 0
 --- !u!1 &1598835109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1187,7 @@ GameObject:
   - component: {fileID: 2079211842}
   - component: {fileID: 2079211844}
   - component: {fileID: 2079211841}
+  - component: {fileID: 2079211845}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1284,6 +1300,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2079211845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079211840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9273d624b3225e44e90bed3b18a2d12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4709430189977453593
 MonoBehaviour:
   m_ObjectHideFlags: 0
