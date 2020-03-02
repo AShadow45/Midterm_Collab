@@ -4252,7 +4252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartSprites: []
   HeartUI: {fileID: 572031628}
-  playerHealth: {fileID: 1927879138}
+  playerHealth: {fileID: 635167402}
 --- !u!1 &562342882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,12 +4371,12 @@ PrefabInstance:
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -240
+      value: -1430
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -130
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
@@ -5130,6 +5130,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 635167399}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &635167401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3377294865951992848, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
+    type: 3}
+  m_PrefabInstance: {fileID: 635167399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &635167402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635167401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea3b4d475f238c4d85a374bef05213c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 10
 --- !u!1 &705655121
 GameObject:
   m_ObjectHideFlags: 0
@@ -11178,10 +11198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2960, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
