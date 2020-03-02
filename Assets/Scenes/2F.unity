@@ -925,6 +925,92 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84, y: 8.98}
   m_EdgeRadius: 0
+--- !u!1 &109027974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109027976}
+  - component: {fileID: 109027975}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &109027975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109027974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACYn+tRUjK9TQIAAPQEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzqVjIAmlt9YhpIcEJrSTiy9CWmMNsuTRR/ga/ntXso0dOj0h9r1dvbe78pkIZStgTpuFEfxFcyDfByScyZdBBz7DgW61WosTtJx3wV0RSDRy3qgTGuOjkGZ1Cc4I9kNtZSAnGPRK5NqUc76FVFtnMZxTaQEho13IVhg6D8gBf4azkHLE03gaTic8zZLBBY8MlAPTUVtiS6tZXjFJywp4kNyRx8m1blITFdppOEE601IK22gh7lhFrymtrEcnSOCCorcoIPALENvChXr95GWeW3CNKEOPj8Jgi+qq5Keu+1ZSu6uVfVDpwz33o3HUVBd9+QcfjiKcG10+t/eOoiNXCLZ7o0dGres1th9+/Czcqz2VO7qR8F6AetULo73iCDrjQ6q3MH7s/l6tpQWwXRevpd4EffX/8QQPl+j+kEpRbgL09a4OrKWO/Y7DB4OT+YWC42rYpgRGg4o/Fn7TbX+HGuBJGOsQalyqIG+jvQlUMo89C268S7VREMON6AoUle64wjLudoQ3WO/aG+SJhtfSXN5g7SO4SYnhjp8kN9BK76/DsoXev4Atlt5JoaATHYBX7FOqlao3rN+TNm3tTU5ZL23rBf+8WgRgmmxyDmwznfCH++kwmT2w5P5hyr9NRneTyYzE3RMKfVK5qoU27cGpqa64wj1rPyKDhaFV3HZu6H4hTqXutVyoXK+ZAVDLusJVOBi8BF8ln3OBDVqDc0LFeZNzRqRmO+DZtVAWnc4PztCsq5KRSnxoFyIZSeNXIyMXcvkLUEsDBBQAAAgIAACYn+tqEm2BbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01FFQSi9KLMgoBoqAOaWZKSB2tFJqqrlBUlpKanKSuXGKmam5roGlWbKBqZl5ioWxoYmxsaVSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif61FSMr1NAgAA9AQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif62oSbYFsAAAAeAAAAAkAJAAAAAAAAAAAAAAAmgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABRAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 0
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &109027976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109027974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5826969, y: -0.16037433, z: -0.43455276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &113554868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1224,7 @@ Transform:
   m_LocalScale: {x: 0.62111783, y: 0.5506889, z: 0.44163}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &116038648
 MonoBehaviour:
@@ -1164,7 +1250,7 @@ GameObject:
   - component: {fileID: 124805481}
   - component: {fileID: 124805480}
   - component: {fileID: 124805479}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1639,7 +1725,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &195548141
 BoxCollider2D:
@@ -3097,7 +3183,7 @@ GameObject:
   - component: {fileID: 409674677}
   - component: {fileID: 409674676}
   - component: {fileID: 409674675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cabinets_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,7 +3370,7 @@ GameObject:
   - component: {fileID: 418314906}
   - component: {fileID: 418314905}
   - component: {fileID: 418314904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3768,7 +3854,7 @@ GameObject:
   - component: {fileID: 472235258}
   - component: {fileID: 472235257}
   - component: {fileID: 472235256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4135,7 +4221,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &554435050
 MonoBehaviour:
@@ -4341,7 +4427,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &576190628
 BoxCollider2D:
@@ -4406,7 +4492,7 @@ GameObject:
   - component: {fileID: 578933095}
   - component: {fileID: 578933094}
   - component: {fileID: 578933093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cabinets_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4563,7 +4649,7 @@ Transform:
   - {fileID: 1349607113}
   - {fileID: 1222499635}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587391122
 GameObject:
@@ -5061,7 +5147,7 @@ GameObject:
   - component: {fileID: 737264701}
   - component: {fileID: 737264700}
   - component: {fileID: 737264699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5415,7 @@ GameObject:
   - component: {fileID: 815433432}
   - component: {fileID: 815433431}
   - component: {fileID: 815433430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5471,7 +5557,7 @@ Transform:
   - {fileID: 1217950360}
   - {fileID: 737264701}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839371680
 GameObject:
@@ -5688,7 +5774,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
@@ -5777,7 +5863,7 @@ Transform:
   - {fileID: 633541833}
   - {fileID: 73922581}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909816106
 GameObject:
@@ -5978,7 +6064,7 @@ GameObject:
   - component: {fileID: 940712950}
   - component: {fileID: 940712949}
   - component: {fileID: 940712948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cabinets_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6630,7 +6716,7 @@ Transform:
   m_LocalScale: {x: 0.81757, y: 0.81757, z: 0.81757}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1024479394
 MonoBehaviour:
@@ -6807,7 +6893,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
@@ -7493,7 +7579,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1138284719
 BoxCollider2D:
@@ -7933,7 +8019,7 @@ GameObject:
   - component: {fileID: 1217950360}
   - component: {fileID: 1217950359}
   - component: {fileID: 1217950358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8487,7 +8573,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1268539319
 BoxCollider2D:
@@ -8728,7 +8814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1301029872
 BoxCollider2D:
@@ -8767,7 +8853,7 @@ GameObject:
   - component: {fileID: 1304005590}
   - component: {fileID: 1304005589}
   - component: {fileID: 1304005588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9873,7 +9959,7 @@ GameObject:
   - component: {fileID: 1599384133}
   - component: {fileID: 1599384132}
   - component: {fileID: 1599384131}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tables_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9981,7 +10067,7 @@ GameObject:
   - component: {fileID: 1619180688}
   - component: {fileID: 1619180687}
   - component: {fileID: 1619180686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10136,7 +10222,7 @@ Transform:
   - {fileID: 400613561}
   - {fileID: 219952440}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658024415
 GameObject:
@@ -10149,7 +10235,7 @@ GameObject:
   - component: {fileID: 1658024418}
   - component: {fileID: 1658024417}
   - component: {fileID: 1658024416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cabinets_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10364,7 +10450,7 @@ GameObject:
   - component: {fileID: 1703415519}
   - component: {fileID: 1703415518}
   - component: {fileID: 1703415517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10542,7 +10628,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1721419199
 BoxCollider2D:
@@ -10890,7 +10976,7 @@ GameObject:
   - component: {fileID: 1894049140}
   - component: {fileID: 1894049139}
   - component: {fileID: 1894049138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tables_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11127,7 +11213,7 @@ PrefabInstance:
     - target: {fileID: 5617390484641283625, guid: bb315664e0bd028409a5de53c08b0d5e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5617390484641283625, guid: bb315664e0bd028409a5de53c08b0d5e,
         type: 3}
@@ -11543,7 +11629,7 @@ GameObject:
   - component: {fileID: 1950242413}
   - component: {fileID: 1950242412}
   - component: {fileID: 1950242411}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crates_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11672,7 +11758,7 @@ Transform:
   - {fileID: 1911230485}
   - {fileID: 1409851927}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968370219
 GameObject:
@@ -11792,7 +11878,7 @@ GameObject:
   - component: {fileID: 1991405674}
   - component: {fileID: 1991405673}
   - component: {fileID: 1991405675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: broken_stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11861,7 +11947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1991405675
 BoxCollider2D:
@@ -12052,7 +12138,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
@@ -12098,7 +12184,7 @@ GameObject:
   - component: {fileID: 2071666783}
   - component: {fileID: 2071666782}
   - component: {fileID: 2071666781}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tables_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12250,7 +12336,7 @@ PrefabInstance:
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2446109977768622226, guid: 9c69ddb7312b1c2418ee89c103adfa01,
         type: 3}
