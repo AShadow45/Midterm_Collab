@@ -33,6 +33,7 @@ public class MiniBoss_Controls : MonoBehaviour
     {
         if (mb_curHealth <= 0)
         {
+            Destroy(this.gameObject);
             StartCoroutine(FadeTo(0.0f, 1.5f));
             webCollider.enabled = false;
         }
