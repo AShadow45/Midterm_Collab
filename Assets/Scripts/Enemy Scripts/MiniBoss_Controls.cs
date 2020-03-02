@@ -33,7 +33,7 @@ public class MiniBoss_Controls : MonoBehaviour
     {
         if (mb_curHealth <= 0)
         {
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
             StartCoroutine(FadeTo(0.0f, 1.5f));
             webCollider.enabled = false;
         }
@@ -62,7 +62,8 @@ public class MiniBoss_Controls : MonoBehaviour
         {
             Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
             spiderWeb.GetComponent<Renderer>().material.color = newColor;
-            yield return null;
+            yield return new WaitForSeconds(1.5f);
+            Destroy(this.gameObject);
         }
     }
 }
