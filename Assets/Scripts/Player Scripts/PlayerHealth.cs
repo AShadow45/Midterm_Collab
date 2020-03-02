@@ -7,11 +7,9 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     public int currentHealth;
-    public int maxHealth;
+    public int maxHealth = 10;
     float EndDelay = .1f;
-
-    [Header("UI")]
-    public Sprite healthUI;
+    
 
     void Start()
     {
@@ -25,12 +23,11 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
 
-       // healthUI.fillAmount = currentHealth / maxHealth;
     }
 
     public void Damage(int dmg) {
