@@ -9,11 +9,6 @@ public class HUD : MonoBehaviour
     public Sprite[] heartSprites;
     public Image HeartUI;
     public PlayerHealth playerHealth;
-
-    void Start()
-    {
-        
-    }
     
     void Update()
     {
