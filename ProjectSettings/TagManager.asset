@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Bat
   - batHB
+  - Bullet
   layers:
   - Default
   - TransparentFX
