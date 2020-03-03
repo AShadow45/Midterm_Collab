@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Objects")]
     public Button attackButton;
     public GameObject bat;
     public GameObject batHB;
@@ -15,13 +15,15 @@ public class PlayerCombat : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float AttTime = 0.2f;
-    public float gun1Recoil = 200f;
+    
+    
     public VJHandler jsMovement;
     private Vector3 direction;
 
     [Header("Weapons")]
+    public float AttTime = 0.2f;
     public int weaponNum = 1;
+    public float gun1Recoil = 200f;
     public float bulletSpeed = 200f;
 
     void Start()
@@ -49,14 +51,18 @@ public class PlayerCombat : MonoBehaviour
             GameObject bullet = Instantiate(bullet1, gun1Barrel.transform.position, gun1Barrel.transform.rotation);
 
             Rigidbody2D bulletrb = bullet.GetComponent<Rigidbody2D>();
-
+            //Bullet add force
             bulletrb.AddForce(gun1Barrel.transform.up * bulletSpeed);
 
+            Destroy(bullet, 2f);
+            //recoil
             rb.AddForce(-gun1Barrel.transform.up * gun1Recoil);
         }
 
 
     }
+   
+   
 
     IEnumerator batAttack()
     {
