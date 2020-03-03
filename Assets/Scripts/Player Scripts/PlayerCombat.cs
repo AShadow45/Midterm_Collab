@@ -12,10 +12,11 @@ public class PlayerCombat : MonoBehaviour
     public GameObject gun1;
     public GameObject gun1Barrel;
     public GameObject bullet1;
-    
 
+    public Rigidbody2D rb;
 
     public float AttTime = 0.2f;
+    public float gun1Recoil = 200f;
     public VJHandler jsMovement;
     private Vector3 direction;
 
@@ -25,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
         
     }
 
@@ -50,6 +51,8 @@ public class PlayerCombat : MonoBehaviour
             Rigidbody2D bulletrb = bullet.GetComponent<Rigidbody2D>();
 
             bulletrb.AddForce(gun1Barrel.transform.up * bulletSpeed);
+
+            rb.AddForce(-gun1Barrel.transform.up * gun1Recoil);
         }
 
 
