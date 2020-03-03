@@ -71,7 +71,7 @@ public class MiniBoss_Controls : MonoBehaviour
     IEnumerator Die()
     {
         gameObject.GetComponent<Collider2D>().enabled = false;
-        yield return new WaitForSeconds(1.6f);
+        yield return new WaitForSeconds(1.55f);
         Destroy(this.gameObject);
     }
 }
