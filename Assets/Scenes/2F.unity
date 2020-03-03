@@ -7040,8 +7040,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1024479393}
   - component: {fileID: 1024479392}
-  - component: {fileID: 1024479391}
   - component: {fileID: 1024479394}
+  - component: {fileID: 1024479391}
   m_Layer: 0
   m_Name: keyCard
   m_TagString: Untagged
@@ -7049,8 +7049,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &1024479391
-CircleCollider2D:
+--- !u!61 &1024479391
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7059,12 +7059,22 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.2, y: 1.36}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 2.2, y: 1.36}
+  m_EdgeRadius: 0
 --- !u!212 &1024479392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7103,8 +7113,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: 590304586adf676478c53478e4743c2f, type: 3}
-  m_Color: {r: 0, g: 0.8673744, b: 1, a: 1}
+  m_Sprite: {fileID: -5960511037448888903, guid: f01e3adfe2c43ba4f86cff19235ebc54,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7122,8 +7133,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024479390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.78, y: -13.79, z: 0}
-  m_LocalScale: {x: 0.81757, y: 0.81757, z: 0.81757}
+  m_LocalPosition: {x: 2.78, y: -13.74, z: 0}
+  m_LocalScale: {x: 0.30757424, y: 0.30757424, z: 0.30757424}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
