@@ -8,6 +8,7 @@ TagManager:
   - EChaser
   - Wall
   - Bat
+  - batHB
   layers:
   - Default
   - TransparentFX
