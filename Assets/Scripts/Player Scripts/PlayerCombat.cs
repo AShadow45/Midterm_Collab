@@ -26,9 +26,15 @@ public class PlayerCombat : MonoBehaviour
     public float gun1Recoil = 200f;
     public float bulletSpeed = 200f;
 
+    [Header("Other")]
+    private bool dashAgain;
+    public float dashSpeed;
+    public float dashCoolDownTime;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dashAgain = true;
         
     }
 
@@ -61,9 +67,21 @@ public class PlayerCombat : MonoBehaviour
 
 
     }
-   
-   
+    public void Dash()
+    {
+        if (dashAgain == true)
+        {
+            rb.AddForce(gun1Barrel.transform.up * dashSpeed);
+            StartCoroutine("DashCoolDown");
+        }
+    }
 
+    IEnumerator DashCoolDown()
+    {
+        dashAgain = false;
+        yield return new WaitForSeconds(dashCoolDownTime);
+        dashAgain = true;
+    }
     IEnumerator batAttack()
     {
         batHB.SetActive(true);

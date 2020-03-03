@@ -479,10 +479,14 @@ MonoBehaviour:
   gun1: {fileID: 3653434934726591150}
   gun1Barrel: {fileID: 3656234599664376807}
   bullet1: {fileID: 4079476341352662473, guid: edaba82135518a544af7989731cf763e, type: 3}
-  AttTime: 0.2
+  rb: {fileID: 0}
   jsMovement: {fileID: 0}
+  AttTime: 0.2
   weaponNum: 2
+  gun1Recoil: 200
   bulletSpeed: 750
+  dashSpeed: 750
+  dashCoolDownTime: 0.5
 --- !u!1 &3653434934726591150
 GameObject:
   m_ObjectHideFlags: 0
