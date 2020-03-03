@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Bat")
+        if (col.gameObject.tag == "batHB")
         {
             ENEM_curHealth -= 1;
         }
