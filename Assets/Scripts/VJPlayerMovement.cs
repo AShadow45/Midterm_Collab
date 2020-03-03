@@ -26,19 +26,6 @@ public class VJPlayerMovement : MonoBehaviour
             //transform.position = new Vector3(Mathf.Clamp(transform.position.x, xMin, xMax), Mathf.Clamp(transform.position.y, yMin, yMax), 0f);//to restric movement of player
         }
 
-        /*
-        for (int i = 0; i < Input.touchCount; i++)
-        {
-            Touch thisTouch = Input.GetTouch(i);
-
-
-            if (thisTouch.phase == TouchPhase.Ended)
-          {
-
-                bat.SetActive(true);
-            }
-        }
-        */
     }
 
     void Start()
@@ -51,7 +38,6 @@ public class VJPlayerMovement : MonoBehaviour
        // yMax = Screen.height - 0;
         //yMin = -500;
 
-        //bat.SetActive(false);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

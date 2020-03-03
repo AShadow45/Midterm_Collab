@@ -33,7 +33,7 @@ Transform:
   - {fileID: 534203578930626474}
   - {fileID: 3995523057415938343}
   m_Father: {fileID: 3377294865951992845}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5993024818574915901
 SpriteRenderer:
@@ -295,8 +295,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7148108761504466410}
   - {fileID: 8005481871763026626}
+  - {fileID: 7148108761504466410}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -481,7 +481,7 @@ MonoBehaviour:
   bullet1: {fileID: 4079476341352662473, guid: edaba82135518a544af7989731cf763e, type: 3}
   AttTime: 0.2
   jsMovement: {fileID: 0}
-  weaponNum: 1
+  weaponNum: 2
   bulletSpeed: 750
 --- !u!1 &3653434934726591150
 GameObject:
@@ -516,7 +516,7 @@ Transform:
   - {fileID: 7175167853246098453}
   - {fileID: 6400487984176251289}
   m_Father: {fileID: 3377294865951992845}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8580645181668854762
 SpriteRenderer:
