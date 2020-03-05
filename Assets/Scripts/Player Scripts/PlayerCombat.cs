@@ -21,10 +21,18 @@ public class PlayerCombat : MonoBehaviour
     private Vector3 direction;
 
     [Header("Weapons")]
+
+    
+
     public float AttTime = 0.2f;
     public int weaponNum = 1;
     public float gun1Recoil = 200f;
     public float bulletSpeed = 200f;
+    
+    [Header("Damage")]
+    public int gunDamage = 1;
+    public int batDamage = 3;
+    public float knockback = 300f;
 
     [Header("Other")]
     private bool dashAgain;
