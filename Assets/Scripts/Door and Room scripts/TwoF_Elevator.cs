@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class TwoF_Elevator : MonoBehaviour
@@ -11,10 +12,12 @@ public class TwoF_Elevator : MonoBehaviour
     Collider2D elevatorCol;
 
     public Animator anim;
+    public Text hintText;
 
     void Start()
     {
         elevatorCol = GetComponent<BoxCollider2D>();
+        hintText.text = "";
     }
 
    void Update()
@@ -35,6 +38,20 @@ public class TwoF_Elevator : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(lockText());
+        }
+    }
+
+    IEnumerator lockText()
+    {
+        hintText.text = "The elevator isn't working.\nThere's no power running on this floor.";
+        yield return new WaitForSeconds(4.5f);
+        hintText.text = "";
+    }
 
     IEnumerator changeScene()
     {
