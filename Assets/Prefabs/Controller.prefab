@@ -320,14 +320,14 @@ RectTransform:
   m_GameObject: {fileID: 2277153093079445989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.69858, y: 0.69858, z: 0.69858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4483597042696061561}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -221, y: 687}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -280, y: -276.31}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6027494538679445390
@@ -853,7 +853,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3324972350116168333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1395,12 +1395,16 @@ MonoBehaviour:
   gun1: {fileID: 2474160370155446798}
   gun1Barrel: {fileID: 2475834065994627911}
   bullet1: {fileID: 4079476341352662473, guid: edaba82135518a544af7989731cf763e, type: 3}
+  smokeFX1: {fileID: 222385952867571373, guid: dfbecdc59666b814ab4816812f530c2d, type: 3}
   rb: {fileID: 0}
   jsMovement: {fileID: 0}
   AttTime: 0.2
   weaponNum: 2
   gun1Recoil: 200
-  bulletSpeed: 750
+  bulletSpeed: 1500
+  gunDamage: 1
+  batDamage: 3
+  knockback: 300
   dashSpeed: 750
   dashCoolDownTime: 0.5
 --- !u!1 &5052918578202354127
