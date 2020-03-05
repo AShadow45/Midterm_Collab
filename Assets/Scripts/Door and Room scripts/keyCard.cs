@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class keyCard : MonoBehaviour
 {
@@ -8,17 +9,15 @@ public class keyCard : MonoBehaviour
 
     Renderer rend;
 
+    public Text hintText;
+
     void Start()
     {
         haveKeyCard = false;
         rend = GetComponent<Renderer>();
+        hintText.text = "";
     }
 
-  
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,6 +25,14 @@ public class keyCard : MonoBehaviour
         {
             haveKeyCard = true;
             rend.enabled = false;
+            StartCoroutine(cardText());
         }
+    }
+
+    IEnumerator cardText()
+    {
+        hintText.text = "Obtained a keycard.\nIt could be useful.";
+        yield return new WaitForSeconds(4.5f);
+        hintText.text = "";
     }
 }
