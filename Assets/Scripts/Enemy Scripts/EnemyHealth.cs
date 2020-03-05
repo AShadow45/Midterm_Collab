@@ -39,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             ENEM_curHealth -= player.GetComponent<PlayerCombat>().gunDamage;
+            Destroy(col.gameObject);
         }
     }
 }
