@@ -4553,6 +4553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 2633754598628125895, guid: 87299c3d25db0f649a455bbe167fc521,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87299c3d25db0f649a455bbe167fc521, type: 3}
 --- !u!4 &572031627 stripped
@@ -5646,6 +5651,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4268374146386355395, guid: 7a91e5d68b0b7814fb28237fb9b5ee0e,
+        type: 3}
+      propertyPath: m_Text
+      value: Basement 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8658026718084360834, guid: 7a91e5d68b0b7814fb28237fb9b5ee0e,
         type: 3}
       propertyPath: m_LocalPosition.x
