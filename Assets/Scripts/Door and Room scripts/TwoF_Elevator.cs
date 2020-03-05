@@ -10,6 +10,8 @@ public class TwoF_Elevator : MonoBehaviour
     public string sceneName;
     Collider2D elevatorCol;
 
+    public Animator anim;
+
     void Start()
     {
         elevatorCol = GetComponent<BoxCollider2D>();
@@ -27,9 +29,16 @@ public class TwoF_Elevator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-        
-                SceneManager.LoadScene(sceneName);
-            
+
+            anim.SetTrigger("fadeOut");
+            StartCoroutine(changeScene());
         }
+    }
+
+
+    IEnumerator changeScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
 }

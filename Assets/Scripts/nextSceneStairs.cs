@@ -8,6 +8,8 @@ public class nextSceneStairs : MonoBehaviour
 
     //change scene once at stairs
 
+    public Animator anim;
+
     public string sceneName;
 
     void Start()
@@ -25,7 +27,14 @@ public class nextSceneStairs : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneName);
+            anim.SetTrigger("fadeOut");
+            StartCoroutine(changeScene());
         }
+    }
+
+    IEnumerator changeScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
     }
 }
