@@ -43,6 +43,6 @@ public class VJPlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hit sth");
+        Debug.Log("Hit" + collision.gameObject.name);
     }
 }
