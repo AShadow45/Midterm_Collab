@@ -2935,7 +2935,7 @@ GameObject:
   - component: {fileID: 879124328}
   m_Layer: 0
   m_Name: Patrol Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3041,7 +3041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879124322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4562626, y: -6.00509, z: 6.671875}
+  m_LocalPosition: {x: -3.4562626, y: -6, z: 6.671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418074612}
@@ -3672,6 +3672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas (VJ)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658026718084360838, guid: 7a91e5d68b0b7814fb28237fb9b5ee0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a91e5d68b0b7814fb28237fb9b5ee0e, type: 3}
@@ -5035,7 +5040,7 @@ GameObject:
   - component: {fileID: 1577419146}
   m_Layer: 0
   m_Name: Patrol Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5141,7 +5146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577419140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.183737, y: -6.00509, z: 6.671875}
+  m_LocalPosition: {x: 4.183737, y: -6, z: 6.671875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418074612}
