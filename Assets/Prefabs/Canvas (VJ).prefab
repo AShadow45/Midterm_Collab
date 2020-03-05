@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 8658026719095587674}
   m_Layer: 5
   m_Name: Image_joystickcontainer
-  m_TagString: Untagged
+  m_TagString: JoyStick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
