@@ -641,11 +641,11 @@ RectTransform:
   m_Father: {fileID: 785400488}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: -10}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &785400484
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2960, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -936,6 +936,7 @@ GameObject:
   - component: {fileID: 1577650782}
   - component: {fileID: 1577650781}
   - component: {fileID: 1577650785}
+  - component: {fileID: 1577650786}
   m_Layer: 0
   m_Name: 'Tank Enemy '
   m_TagString: Enemy
@@ -955,6 +956,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2379db13be6213f4b80f9aa487b989ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 0.5
+  ySpeed: 0.1
   xnegat: -7
   xposit: 7
   ynegat: 0
@@ -1060,8 +1063,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 825542917}
+  enemyHealth: {fileID: 1577650786}
   damage: 0
+--- !u!114 &1577650786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577650780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9273d624b3225e44e90bed3b18a2d12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ENEM_curHealth: 0
+  ENEM_maxHealth: 0
 --- !u!1 &1598835109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2379db13be6213f4b80f9aa487b989ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 0.5
+  ySpeed: 0.1
   xnegat: -7
   xposit: 7
   ynegat: 0
@@ -1481,7 +1501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
-  ENEM_maxHealth: 0
+  ENEM_maxHealth: 5
 --- !u!1 &2103576065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,12 +1578,12 @@ PrefabInstance:
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -378
+      value: -1375
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -69
+      value: 434
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
@@ -1614,6 +1634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633754598628125895, guid: 87299c3d25db0f649a455bbe167fc521,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87299c3d25db0f649a455bbe167fc521, type: 3}

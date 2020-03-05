@@ -253,15 +253,15 @@ RectTransform:
   m_GameObject: {fileID: 2984846122011207601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 31.473719, y: 15.3086815, z: 15.3086815}
+  m_LocalScale: {x: 1.9671074, y: 0.9567926, z: 5.467386}
   m_Children:
   - {fileID: 4323088422144102830}
-  m_Father: {fileID: 8658026718084360834}
-  m_RootOrder: 4
+  m_Father: {fileID: 8658026719095587679}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 72.18749, y: 25.9375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1025157842016090745
@@ -477,11 +477,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 8658026719095587679}
+  - {fileID: 7858230859104293239}
   - {fileID: 975128885}
   - {fileID: 5869491197248695676}
-  - {fileID: 7858230859104293239}
-  - {fileID: 1578136496583510832}
+  - {fileID: 8658026719095587679}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -564,7 +563,7 @@ GameObject:
   - component: {fileID: 8658026719095587674}
   m_Layer: 5
   m_Name: Image_joystickcontainer
-  m_TagString: Untagged
+  m_TagString: JoyStick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,8 +580,9 @@ RectTransform:
   m_LocalScale: {x: 16, y: 16, z: 2.8}
   m_Children:
   - {fileID: 8658026719665943781}
+  - {fileID: 1578136496583510832}
   m_Father: {fileID: 8658026718084360834}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -610,12 +610,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.59607846}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 355ef98be5c93b340bbdb898af924b77, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -701,7 +701,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -5434982155888199914, guid: f2aa771bdb597c94aa23822dcd325065,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -756,7 +757,7 @@ PrefabInstance:
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
@@ -772,21 +773,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633754598628125894, guid: 87299c3d25db0f649a455bbe167fc521,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2633754598628125895, guid: 87299c3d25db0f649a455bbe167fc521,
         type: 3}
