@@ -34,10 +34,11 @@ public class PlayerCombat : MonoBehaviour
     public int batDamage = 3;
     public float knockback = 300f;
 
-    [Header("Other")]
-    private bool dashAgain;
+    [Header("Dash")]
+    
     public float dashSpeed;
     public float dashCoolDownTime;
+    private bool dashAgain;
 
     void Start()
     {
