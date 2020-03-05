@@ -5,8 +5,11 @@ using UnityEngine;
 public class EnemyPatrol : MonoBehaviour
 {
     //..............................................SPEED
-    float xSpeed = 0.5f;
-    float ySpeed = 0.1f;
+    [Header("Speed Settings")]
+    [Tooltip("Speed in the X-Axis")]
+    public float xSpeed = 0.5f;
+    [Tooltip("Speed in the Y-Axis")]
+    public float ySpeed = 0.1f;
     //..............................................DIRECTION
     int xDirect = -1;
     int yDirect = -1;
