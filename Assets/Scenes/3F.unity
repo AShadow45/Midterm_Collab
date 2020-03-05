@@ -7705,26 +7705,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3377294865951992841, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377294865951992841, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377294865951992841, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
-        type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3377294865951992841, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
-        type: 3}
-      propertyPath: m_Simulated
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3377294865951992845, guid: 66f2407be0d8e3143b6ecaa001ca1e14,
         type: 3}
       propertyPath: m_LocalPosition.x
