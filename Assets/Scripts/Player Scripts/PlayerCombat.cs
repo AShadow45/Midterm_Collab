@@ -21,6 +21,10 @@ public class PlayerCombat : MonoBehaviour
     private Vector3 direction;
 
     [Header("Weapons")]
+
+    public int gunDamage = 1;
+    public int batDamage = 3;
+
     public float AttTime = 0.2f;
     public int weaponNum = 1;
     public float gun1Recoil = 200f;

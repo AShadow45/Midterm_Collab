@@ -8,8 +8,12 @@ public class EnemyHealth : MonoBehaviour
     public int ENEM_curHealth;
     public int ENEM_maxHealth;
 
+    public GameObject player;
+
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        
         ENEM_curHealth = ENEM_maxHealth;
     }
     
@@ -30,7 +34,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if (col.gameObject.tag == "batHB")
         {
-            ENEM_curHealth -= 1;
+            ENEM_curHealth -= player.GetComponent<PlayerCombat>().batDamage;
+        }
+        if (col.gameObject.tag == "Bullet")
+        {
+            ENEM_curHealth -= player.GetComponent<PlayerCombat>().gunDamage;
         }
     }
 }
