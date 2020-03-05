@@ -30,6 +30,7 @@ public class VJPlayerMovement : MonoBehaviour
 
     void Start()
     {
+        jsMovement = GameObject.FindWithTag("JoyStick").GetComponent<VJHandler>();
         rb = GetComponent<Rigidbody2D>();
 
         //Initialization of boundaries

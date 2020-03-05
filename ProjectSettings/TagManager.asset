@@ -10,6 +10,9 @@ TagManager:
   - Bat
   - batHB
   - Bullet
+  - JoyStick
+  - AttackButton
+  - DashButton
   layers:
   - Default
   - TransparentFX

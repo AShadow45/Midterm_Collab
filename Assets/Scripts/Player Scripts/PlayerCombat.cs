@@ -35,6 +35,8 @@ public class PlayerCombat : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         dashAgain = true;
+
+        jsMovement = GameObject.FindWithTag("JoyStick").GetComponent<VJHandler>();
         
     }
 
