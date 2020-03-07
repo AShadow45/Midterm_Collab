@@ -13,6 +13,8 @@ public class PlayerCombat : MonoBehaviour
     public GameObject gun1Barrel;
     public GameObject bullet1;
 
+    public GameObject smokeFX1;
+
     public Rigidbody2D rb;
 
     
@@ -66,14 +68,17 @@ public class PlayerCombat : MonoBehaviour
         if (weaponNum == 2)
         {
             GameObject bullet = Instantiate(bullet1, gun1Barrel.transform.position, gun1Barrel.transform.rotation);
+            GameObject newsmokeFX1 = Instantiate(smokeFX1, gun1Barrel.transform.position, gun1Barrel.transform.rotation);
 
             Rigidbody2D bulletrb = bullet.GetComponent<Rigidbody2D>();
             //Bullet add force
             bulletrb.AddForce(gun1Barrel.transform.up * bulletSpeed);
 
             Destroy(bullet, 2f);
+            Destroy(newsmokeFX1, 1f);
             //recoil
             rb.AddForce(-gun1Barrel.transform.up * gun1Recoil);
+            
         }
 
 
