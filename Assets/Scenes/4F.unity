@@ -2341,7 +2341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744277508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.54, y: 3.3198714, z: 0}
+  m_LocalPosition: {x: 35.3, y: 3.3198714, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3031,6 +3031,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
   ENEM_maxHealth: 2
+  player: {fileID: 0}
+  bloodFX: {fileID: 0}
 --- !u!114 &879124328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5007,6 +5009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
   ENEM_maxHealth: 2
+  player: {fileID: 0}
+  bloodFX: {fileID: 0}
 --- !u!114 &1577419146
 MonoBehaviour:
   m_ObjectHideFlags: 0
