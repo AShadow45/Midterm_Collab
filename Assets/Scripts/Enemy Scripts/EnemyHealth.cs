@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int ENEM_maxHealth;
 
     public GameObject player;
+    public GameObject bloodFX;
 
     void Start()
     {
@@ -39,6 +40,9 @@ public class EnemyHealth : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             ENEM_curHealth -= player.GetComponent<PlayerCombat>().gunDamage;
+
+            GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);
+
             Destroy(col.gameObject);
         }
     }
