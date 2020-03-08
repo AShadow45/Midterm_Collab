@@ -12,15 +12,23 @@ public class nextSceneStairs : MonoBehaviour
 
     public string sceneName;
 
+    public AudioSource aud;
+    float startVolume = 1;
+
+    bool startFade = false;
+
     void Start()
     {
-        
+        aud.volume = startVolume;
     }
 
  
     void Update()
     {
-        
+        if (startFade)
+        {
+            aud.volume -= startVolume * Time.deltaTime;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,6 +37,11 @@ public class nextSceneStairs : MonoBehaviour
         {
             anim.SetTrigger("fadeOut");
             StartCoroutine(changeScene());
+
+            if (aud.isPlaying == true)
+            {
+                startFade = true;
+            }
         }
     }
 

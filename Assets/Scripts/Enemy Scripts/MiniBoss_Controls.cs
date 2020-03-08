@@ -21,6 +21,7 @@ public class MiniBoss_Controls : MonoBehaviour
     [Header("Spider Web")]
     public GameObject spiderWeb;
     public Collider2D webCollider;
+    public AudioSource aud;
 
     void Start()
     {
@@ -63,6 +64,7 @@ public class MiniBoss_Controls : MonoBehaviour
         {
             Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
             spiderWeb.GetComponent<Renderer>().material.color = newColor;
+            aud.Play();
             yield return null;
         }
     }

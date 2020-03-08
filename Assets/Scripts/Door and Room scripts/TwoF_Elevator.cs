@@ -17,10 +17,15 @@ public class TwoF_Elevator : MonoBehaviour
     public AudioClip wrong;
     public AudioClip goUp;
 
+    public AudioSource bgmSource;
+    float startVolume = 1;
+    bool bgmFade = false;
+
     void Start()
     {
         elevatorCol = GetComponent<BoxCollider2D>();
         hintText.text = "";
+        bgmSource.volume = startVolume;
     }
 
    void Update()
@@ -28,6 +33,11 @@ public class TwoF_Elevator : MonoBehaviour
         if (generator.GetComponent<generator>().generatorOn == true)
         {
             elevatorCol.isTrigger = true;
+        }
+
+        if (bgmFade)
+        {
+            bgmSource.volume -= startVolume * Time.deltaTime;
         }
     }
 
@@ -38,6 +48,12 @@ public class TwoF_Elevator : MonoBehaviour
             aud.PlayOneShot(goUp);
             anim.SetTrigger("fadeOut");
             StartCoroutine(changeScene());
+
+
+            if (bgmSource.isPlaying == true)
+            {
+               bgmFade = true;
+            }
         }
     }
 
