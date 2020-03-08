@@ -7,9 +7,12 @@ public class broken_stairs : MonoBehaviour
 {
     public Text hintText;
 
+    AudioSource aud;
+
     void Start()
     {
         hintText.text = "";
+        aud = GetComponent<AudioSource>();
     }
 
 
@@ -18,6 +21,7 @@ public class broken_stairs : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(stairText());
+            aud.Play();
         }
     }
     IEnumerator stairText()

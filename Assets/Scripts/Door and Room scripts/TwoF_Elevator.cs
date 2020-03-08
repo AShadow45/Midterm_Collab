@@ -13,6 +13,9 @@ public class TwoF_Elevator : MonoBehaviour
 
     public Animator anim;
     public Text hintText;
+    AudioSource aud;
+    public AudioClip wrong;
+    public AudioClip goUp;
 
     void Start()
     {
@@ -32,7 +35,7 @@ public class TwoF_Elevator : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            aud.PlayOneShot(goUp);
             anim.SetTrigger("fadeOut");
             StartCoroutine(changeScene());
         }
@@ -42,6 +45,7 @@ public class TwoF_Elevator : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            aud.PlayOneShot(wrong);
             StartCoroutine(lockText());
         }
     }

@@ -9,10 +9,13 @@ public class generator : MonoBehaviour
 
     public Text hintText;
 
+    AudioSource aud;
+
     void Start()
     {
         generatorOn = false;
         hintText.text = "";
+        aud = GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,6 +24,7 @@ public class generator : MonoBehaviour
         {
             generatorOn = true;
             StartCoroutine(elevatorText());
+            aud.Play();
         
         }
     }

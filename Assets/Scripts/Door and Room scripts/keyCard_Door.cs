@@ -10,6 +10,11 @@ public class keyCard_Door : MonoBehaviour
     private SpriteRenderer rend;
     public Text hintText;
 
+    public AudioSource aud;
+    public AudioClip locked;
+    public AudioClip unlocked;
+    public AudioClip open;
+
     void Start()
     {
         thisDoorCollider = GetComponent<BoxCollider2D>();
@@ -23,6 +28,7 @@ public class keyCard_Door : MonoBehaviour
         if (keyCard.GetComponent<keyCard>().haveKeyCard == true)
         {
             thisDoorCollider.isTrigger = true;
+            
        
         }
 
@@ -34,6 +40,8 @@ public class keyCard_Door : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             rend.enabled = !rend.enabled;
+            aud.PlayOneShot(unlocked);
+            aud.PlayOneShot(open);
         }
     }
 
@@ -42,6 +50,7 @@ public class keyCard_Door : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StartCoroutine(lockText());
+            aud.PlayOneShot(locked);
         }
     }
 

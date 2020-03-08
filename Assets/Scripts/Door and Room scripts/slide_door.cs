@@ -7,11 +7,19 @@ public class slide_door : MonoBehaviour
 
     public Animator anim;
 
-   void OnTriggerEnter2D(Collider2D other)
+    AudioSource aud;
+
+    void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             anim.SetTrigger("open");
+            aud.Play();
         }
     }
 }
