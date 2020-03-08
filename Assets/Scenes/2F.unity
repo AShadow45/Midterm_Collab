@@ -12189,7 +12189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generator: {fileID: 116038644}
-  sceneName: 1F
+  sceneName: 1F (copy)
   anim: {fileID: 1350458221}
   hintText: {fileID: 2126759400}
   wrong: {fileID: 8300000, guid: 32ddbd03afcca544cb79b859e883a7ca, type: 3}
