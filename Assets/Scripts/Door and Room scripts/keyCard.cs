@@ -11,11 +11,14 @@ public class keyCard : MonoBehaviour
 
     public Text hintText;
 
+    AudioSource aud;
+
     void Start()
     {
         haveKeyCard = false;
         rend = GetComponent<Renderer>();
         hintText.text = "";
+        aud = GetComponent<AudioSource>();
     }
 
 
@@ -25,6 +28,7 @@ public class keyCard : MonoBehaviour
         {
             haveKeyCard = true;
             rend.enabled = false;
+            aud.Play();
             StartCoroutine(cardText());
         }
     }
