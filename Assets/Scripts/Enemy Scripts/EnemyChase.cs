@@ -16,7 +16,7 @@ public class EnemyChase : MonoBehaviour
     float distVal;
     Transform target;
 
-    bool isChasing;
+    public bool isChasing;
     public float detectRad;
     
 
@@ -47,7 +47,7 @@ public class EnemyChase : MonoBehaviour
         }
     }
 
-    void Seek()
+    public void Seek()
     {
         playerInco = Physics2D.OverlapCircle(transform.position, detectRad, playerLayer);
         if (playerInco)
