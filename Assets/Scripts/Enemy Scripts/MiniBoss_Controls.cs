@@ -11,6 +11,7 @@ public class MiniBoss_Controls : MonoBehaviour
     public GameObject Webs;
     public Transform SpawnPoint;
     public int webMax = 5;
+    public int speed = 100;
 
     //.....................................................HEALTH
     [Header("Health Settings")]
@@ -65,6 +66,7 @@ public class MiniBoss_Controls : MonoBehaviour
             }
         }
 
+<<<<<<< HEAD
         void Damage()
         {
             for (int i = 0; i < webMax; i++)
@@ -72,6 +74,13 @@ public class MiniBoss_Controls : MonoBehaviour
                 Instantiate(Webs, SpawnPoint.position, transform.rotation);
             }
 
+=======
+    void Damage() {
+        for (int i = 0; i < webMax; i++) {
+           // Instantiate(Webs, SpawnPoint.position, transform.rotation);
+            GameObject newBullet = Instantiate(Webs, transform.position, Quaternion.identity) as GameObject;
+            newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
+>>>>>>> a1c27098eed0baa537a813b4fe4e81370f8ab824
         }
 
         //spider web fade
