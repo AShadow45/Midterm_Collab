@@ -5671,11 +5671,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9017293901152095288, guid: 46ae56d65b0bcdc4caed47e503634240,
-        type: 3}
-      propertyPath: m_Text
-      value: Basement 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46ae56d65b0bcdc4caed47e503634240, type: 3}
 --- !u!95 &1179377487 stripped
@@ -9345,8 +9340,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bb_curHealth: 0
   bb_maxHealth: 30
+  bb_Minion_curHealth: 0
   bb_Minion_maxHealth: 3
   Minions: {fileID: 3066849362054265603, guid: a87c759f4f457fb45af28850b2607ebf, type: 3}
+  curNUM_Minions: 0
   maxNUM_Minions: 5
 --- !u!61 &1719629099
 BoxCollider2D:
