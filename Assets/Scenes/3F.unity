@@ -898,6 +898,7 @@ MonoBehaviour:
   spiderWeb: {fileID: 1284762117}
   webCollider: {fileID: 2046466782}
   aud: {fileID: 1284762118}
+  gun: {fileID: 470989063}
 --- !u!114 &207828644
 MonoBehaviour:
   m_ObjectHideFlags: 0
