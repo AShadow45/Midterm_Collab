@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class item_collect : MonoBehaviour
 {
-    AudioSource aud;
+    public AudioSource aud;
+    //public AudioClip pickUpSound;
+
     void Start()
     {
-        aud = GetComponent<AudioSource>();
+        //aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

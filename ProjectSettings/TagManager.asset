@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bat
+  - JoyStick
+  - Bullet
+  - batHB
+  - Gun
   layers:
   - Default
   - TransparentFX
