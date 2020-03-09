@@ -33,7 +33,7 @@ public class EnemyHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "batHB")
+        if (col.gameObject.tag == "Bat")
         {
             ENEM_curHealth -= player.GetComponent<PlayerCombat>().batDamage;
         }
