@@ -14,6 +14,7 @@ TagManager:
   - AttackButton
   - DashButton
   - EnemExplode
+  - Gun
   layers:
   - Default
   - TransparentFX
