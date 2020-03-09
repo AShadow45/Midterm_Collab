@@ -55,9 +55,9 @@ public class MiniBoss_Controls : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "batHB")
+        if (col.gameObject.tag == "Bat")
         {
-            mb_curHealth -= 1;
+            mb_curHealth -= 2;
         }
 
         if (col.gameObject.tag == "Player")
