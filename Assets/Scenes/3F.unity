@@ -2264,6 +2264,7 @@ GameObject:
   - component: {fileID: 475658965}
   - component: {fileID: 475658964}
   - component: {fileID: 475658963}
+  - component: {fileID: 475658969}
   m_Layer: 0
   m_Name: Spider (2)
   m_TagString: Untagged
@@ -2283,7 +2284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1627915571}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &475658963
 Animator:
@@ -2434,6 +2435,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &475658969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475658961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 687156015}
+  enemyHealth: {fileID: 475658964}
+  damage: 2
 --- !u!1 &475728750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1627915571}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &489776244
 MonoBehaviour:
@@ -3599,6 +3615,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 687156012}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &687156015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2480967266849441857, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 687156012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687156014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea3b4d475f238c4d85a374bef05213c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &736233879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7446,10 +7474,10 @@ Transform:
   m_LocalPosition: {x: 7.8322697, y: 4.269421, z: -181.17969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2105882968}
   - {fileID: 489776243}
-  - {fileID: 1641606146}
+  - {fileID: 2105882968}
   - {fileID: 475658962}
+  - {fileID: 1641606146}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7468,6 +7496,7 @@ GameObject:
   - component: {fileID: 1641606149}
   - component: {fileID: 1641606148}
   - component: {fileID: 1641606147}
+  - component: {fileID: 1641606153}
   m_Layer: 0
   m_Name: Spider (3)
   m_TagString: Untagged
@@ -7487,7 +7516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1627915571}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1641606147
 Animator:
@@ -7638,6 +7667,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1641606153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641606145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 687156015}
+  enemyHealth: {fileID: 1641606148}
+  damage: 2
 --- !u!1 &1651107205
 GameObject:
   m_ObjectHideFlags: 0
@@ -9295,6 +9339,7 @@ GameObject:
   - component: {fileID: 2105882970}
   - component: {fileID: 2105882969}
   - component: {fileID: 2105882973}
+  - component: {fileID: 2105882975}
   - component: {fileID: 2105882974}
   m_Layer: 0
   m_Name: Spider (1)
@@ -9315,7 +9360,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1627915571}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2105882969
 MonoBehaviour:
@@ -9466,6 +9511,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2105882975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105882967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 687156015}
+  enemyHealth: {fileID: 2105882973}
+  damage: 2
 --- !u!1 &2118876325
 GameObject:
   m_ObjectHideFlags: 0
