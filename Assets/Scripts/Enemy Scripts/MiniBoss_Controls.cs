@@ -66,42 +66,36 @@ public class MiniBoss_Controls : MonoBehaviour
             }
         }
 
-<<<<<<< HEAD
-        void Damage()
-        {
-            for (int i = 0; i < webMax; i++)
-            {
-                Instantiate(Webs, SpawnPoint.position, transform.rotation);
-            }
 
-=======
     void Damage() {
         for (int i = 0; i < webMax; i++) {
-           // Instantiate(Webs, SpawnPoint.position, transform.rotation);
+            // Instantiate(Webs, SpawnPoint.position, transform.rotation);
             GameObject newBullet = Instantiate(Webs, transform.position, Quaternion.identity) as GameObject;
             newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
->>>>>>> a1c27098eed0baa537a813b4fe4e81370f8ab824
-        }
 
-        //spider web fade
-        IEnumerator FadeTo(float aValue, float aTime)
-        {
-            float alpha = spiderWeb.GetComponent<Renderer>().material.color.a;
-            for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
-            {
-                Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
-                spiderWeb.GetComponent<Renderer>().material.color = newColor;
-                aud.Play();
-                yield return null;
-            }
-        }
-
-        //destroy spider boss
-        IEnumerator Die()
-        {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            yield return new WaitForSeconds(1.55f);
-            Destroy(this.gameObject);
         }
     }
+
+            //spider web fade
+            IEnumerator FadeTo(float aValue, float aTime)
+            {
+                float alpha = spiderWeb.GetComponent<Renderer>().material.color.a;
+                for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+                {
+                    Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+                    spiderWeb.GetComponent<Renderer>().material.color = newColor;
+                    aud.Play();
+                    yield return null;
+                }
+            }
+
+            //destroy spider boss
+            IEnumerator Die()
+            {
+                gameObject.GetComponent<Collider2D>().enabled = false;
+                yield return new WaitForSeconds(1.55f);
+                Destroy(this.gameObject);
+            }
+        }
+    
 
