@@ -821,9 +821,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc5c4ca041ee9147beb4ff0f4743808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartSprites: []
-  HeartUI: {fileID: 0}
-  playerHealth: {fileID: 0}
+  heartSprites:
+  - {fileID: 21300000, guid: a27dbe74de9fe0e4c98b5fb9664b2050, type: 3}
+  - {fileID: -2498237929361903064, guid: 2be0644bd402da9498f886fd82d54168, type: 3}
+  - {fileID: -7088253282297248978, guid: 2be0644bd402da9498f886fd82d54168, type: 3}
+  - {fileID: 5721549090052801610, guid: 2be0644bd402da9498f886fd82d54168, type: 3}
+  - {fileID: -5820643624382827686, guid: 2be0644bd402da9498f886fd82d54168, type: 3}
+  - {fileID: 2405715058635212596, guid: 2be0644bd402da9498f886fd82d54168, type: 3}
+  - {fileID: -3633507186148865497, guid: 72e5cfb7d383a6f45a13592deb8de74f, type: 3}
+  - {fileID: -2647286588357779122, guid: 72e5cfb7d383a6f45a13592deb8de74f, type: 3}
+  - {fileID: 143736047912218516, guid: 72e5cfb7d383a6f45a13592deb8de74f, type: 3}
+  - {fileID: -6091857214403191396, guid: 72e5cfb7d383a6f45a13592deb8de74f, type: 3}
+  - {fileID: 4064589516598838392, guid: 72e5cfb7d383a6f45a13592deb8de74f, type: 3}
+  HeartUI: {fileID: 3103430909534877825}
+  playerHealth: {fileID: 2480967266849441857}
 --- !u!1 &3103430909534877827
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +870,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: -8, y: 252}
-  m_SizeDelta: {x: 500, y: 200}
+  m_SizeDelta: {x: 1100, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3103430909534877824
 CanvasRenderer:
@@ -887,7 +898,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 590304586adf676478c53478e4743c2f, type: 3}
+  m_Sprite: {fileID: 4064589516598838392, guid: 72e5cfb7d383a6f45a13592deb8de74f,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -912,7 +924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3103430909627136396
 Transform:
   m_ObjectHideFlags: 0
@@ -1821,7 +1833,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Basement 1
+  m_Text: Basement 2
 --- !u!95 &7626680025924643473
 Animator:
   serializedVersion: 3
