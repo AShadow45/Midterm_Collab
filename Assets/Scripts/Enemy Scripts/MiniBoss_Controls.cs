@@ -9,6 +9,8 @@ public class MiniBoss_Controls : MonoBehaviour
     //.....................................................ATTACK
     [Header("Attack Settings")]
     public GameObject Webs;
+    public Transform SpawnPoint;
+    public int webMax = 5;
 
     //.....................................................HEALTH
     [Header("Health Settings")]
@@ -30,9 +32,13 @@ public class MiniBoss_Controls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         mb_curHealth = mb_maxHealth;
+
         gun.SetActive(false);
         
-    }
+
+        SpawnPoint = GameObject.FindGameObjectWithTag("MiniBoss").transform;
+        InvokeRepeating("Damage", 0, .1f);
+
     
     void Update()
     {
@@ -41,10 +47,12 @@ public class MiniBoss_Controls : MonoBehaviour
             StartCoroutine(FadeTo(0.0f, 1.5f));
             webCollider.enabled = false;
             StartCoroutine(Die());
+
             gun.SetActive(true);
         
+
         }
-        
+        //Damage();
     }
 
     //......................................................ATTACK
@@ -58,6 +66,9 @@ public class MiniBoss_Controls : MonoBehaviour
     }
 
     void Damage() {
+        for (int i = 0; i < webMax; i++) {
+            Instantiate(Webs, SpawnPoint.position, transform.rotation);
+        }
         
     }
 
