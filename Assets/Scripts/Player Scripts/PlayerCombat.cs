@@ -42,12 +42,17 @@ public class PlayerCombat : MonoBehaviour
     public float dashCoolDownTime;
     private bool dashAgain;
 
+    [Header("Button")]
+    public GameObject attckButton;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         dashAgain = true;
 
         jsMovement = GameObject.FindWithTag("JoyStick").GetComponent<VJHandler>();
+
+        attckButton.SetActive(false);
         
     }
 
@@ -58,6 +63,12 @@ public class PlayerCombat : MonoBehaviour
         direction = jsMovement.InputDirection;
         SetDir();
         ShowWeapon();
+
+        if (weaponNum == 1 || weaponNum ==2)
+        {
+            attckButton.SetActive(true);
+        }
+
     }
     public void Attack()
     {
@@ -135,6 +146,21 @@ public class PlayerCombat : MonoBehaviour
         else if (weaponNum != 2)
         {
             gun1.SetActive(false);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bat"))
+        {
+            weaponNum = 1;
+            other.gameObject.SetActive(false);
+        }
+
+        if (other.CompareTag("Gun"))
+        {
+            weaponNum = 2;
+            other.gameObject.SetActive(false);
         }
     }
 }

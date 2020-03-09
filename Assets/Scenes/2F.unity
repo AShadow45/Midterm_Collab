@@ -2909,10 +2909,20 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1478238817}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: enemyHealth
+      value: 
+      objectReference: {fileID: 2136984533}
     - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
       propertyPath: m_Name
       value: Tank Enemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5156791413299562670, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
@@ -4568,13 +4578,14 @@ GameObject:
   - component: {fileID: 527133340}
   - component: {fileID: 527133339}
   - component: {fileID: 527133338}
+  - component: {fileID: 527133344}
   m_Layer: 0
   m_Name: Tank Enemy (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &527133337
 Transform:
   m_ObjectHideFlags: 0
@@ -4583,7 +4594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527133336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.61, y: -27, z: 0}
+  m_LocalPosition: {x: 10.27, y: -27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 775002084}
@@ -4672,7 +4683,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.11344957, y: -0.24108124}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4683,7 +4694,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.8719225, y: 1.3119888}
   m_EdgeRadius: 0
 --- !u!212 &527133343
 SpriteRenderer:
@@ -4734,6 +4745,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &527133344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527133336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d12e094db4a49c24fa4b1e24ab15d11f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &562342882
 GameObject:
   m_ObjectHideFlags: 0
@@ -8073,6 +8103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5156791413299562670, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10472,7 +10507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1350458220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11330,6 +11365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 4483597042696061561, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5953112981647971478, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12116,7 +12156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generator: {fileID: 116038644}
-  sceneName: 1F (copy)
+  sceneName: 1F
   anim: {fileID: 1350458221}
   hintText: {fileID: 2126759400}
   wrong: {fileID: 8300000, guid: 32ddbd03afcca544cb79b859e883a7ca, type: 3}
@@ -13116,13 +13156,14 @@ GameObject:
   - component: {fileID: 1943849877}
   - component: {fileID: 1943849876}
   - component: {fileID: 1943849875}
+  - component: {fileID: 1943849881}
   m_Layer: 0
   m_Name: Tank Enemy (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1943849874
 Transform:
   m_ObjectHideFlags: 0
@@ -13131,7 +13172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943849873}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.99, y: -8.01, z: 0}
+  m_LocalPosition: {x: 34.92, y: 10.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 775002084}
@@ -13220,7 +13261,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.10260582, y: -0.19837284}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13231,7 +13272,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.682743, y: 1.1778507}
   m_EdgeRadius: 0
 --- !u!212 &1943849880
 SpriteRenderer:
@@ -13282,6 +13323,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1943849881
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943849873}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d12e094db4a49c24fa4b1e24ab15d11f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1945434655
 GameObject:
   m_ObjectHideFlags: 0
@@ -14582,6 +14642,18 @@ Transform:
   m_Father: {fileID: 1653526083}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136984533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5156791413299562666, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1108389486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9273d624b3225e44e90bed3b18a2d12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5156791411780899876
 PrefabInstance:
   m_ObjectHideFlags: 0
