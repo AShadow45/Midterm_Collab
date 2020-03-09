@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
   ENEM_maxHealth: 3
-  player: {fileID: 0}
+  player: {fileID: 687156014}
   bloodFX: {fileID: 222385952867571373, guid: 8b903f46279c77f4d825390f1de9fecd, type: 3}
 --- !u!114 &475658965
 MonoBehaviour:
@@ -3590,6 +3590,12 @@ PrefabInstance:
 --- !u!95 &687156013 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5597374916027029374, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 687156012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &687156014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4483597043012914352, guid: 46ae56d65b0bcdc4caed47e503634240,
     type: 3}
   m_PrefabInstance: {fileID: 687156012}
   m_PrefabAsset: {fileID: 0}
@@ -7516,7 +7522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
   ENEM_maxHealth: 3
-  player: {fileID: 0}
+  player: {fileID: 687156014}
   bloodFX: {fileID: 222385952867571373, guid: 8b903f46279c77f4d825390f1de9fecd, type: 3}
 --- !u!114 &1641606149
 MonoBehaviour:
@@ -9439,7 +9445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ENEM_curHealth: 0
   ENEM_maxHealth: 3
-  player: {fileID: 0}
+  player: {fileID: 687156014}
   bloodFX: {fileID: 222385952867571373, guid: 8b903f46279c77f4d825390f1de9fecd, type: 3}
 --- !u!95 &2105882974
 Animator:

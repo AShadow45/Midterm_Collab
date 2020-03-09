@@ -13,6 +13,7 @@ TagManager:
   - JoyStick
   - AttackButton
   - DashButton
+  - EnemExplode
   layers:
   - Default
   - TransparentFX
