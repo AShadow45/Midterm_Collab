@@ -28,6 +28,11 @@ public class MiniBoss_Controls : MonoBehaviour
     public Collider2D webCollider;
     public AudioSource aud;
 
+    //fade out boss bgm
+    public AudioSource miniBossBGM;
+    float startVolume = 1;
+    bool startFade = false;
+
     public GameObject gun;
 
     void Start()
@@ -37,6 +42,8 @@ public class MiniBoss_Controls : MonoBehaviour
         SpawnPoint = GameObject.FindGameObjectWithTag("MiniBoss").transform;
         InvokeRepeating("Damage", 0, .1f);
         gun.SetActive(false);
+
+        miniBossBGM.volume = startVolume;
     }
     
     void Update()
@@ -47,6 +54,16 @@ public class MiniBoss_Controls : MonoBehaviour
             webCollider.enabled = false;
             StartCoroutine(Die());
             gun.SetActive(true);
+
+            if (miniBossBGM.isPlaying == true)
+            {
+                startFade = true;
+            }
+        }
+
+        if (startFade)
+        {
+            miniBossBGM.volume -= startVolume * Time.deltaTime;
         }
         //Damage();
     }

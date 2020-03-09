@@ -35,7 +35,7 @@ public class nextSceneStairs : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            anim.SetTrigger("fadeOut");
+            //anim.SetTrigger("fadeOut");
             StartCoroutine(changeScene());
 
             if (aud.isPlaying == true)
@@ -47,6 +47,7 @@ public class nextSceneStairs : MonoBehaviour
 
     IEnumerator changeScene()
     {
+        anim.SetTrigger("fadeOut");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
     }

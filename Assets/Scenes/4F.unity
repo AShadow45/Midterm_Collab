@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b819d1e05f9fc44aaa3cf4353b440c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 711760920}
+  anim: {fileID: 1734530892}
   sceneName: 3F
   aud: {fileID: 204678643}
 --- !u!82 &204678643
@@ -3466,6 +3466,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1280386284}
   enemyHealth: {fileID: 879124327}
   damage: 1
+  aud: {fileID: 1280386283}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!95 &879124329
 Animator:
   serializedVersion: 3
@@ -4477,6 +4479,12 @@ Transform:
 --- !u!1 &1280386282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4483597043012914352, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 1829241389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1280386283 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3326816005216600880, guid: 46ae56d65b0bcdc4caed47e503634240,
     type: 3}
   m_PrefabInstance: {fileID: 1829241389}
   m_PrefabAsset: {fileID: 0}
@@ -5620,6 +5628,12 @@ Transform:
   m_Father: {fileID: 953143489}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1734530892 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5597374916027029374, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 1829241389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1748313234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6058,7 +6072,7 @@ PrefabInstance:
     - target: {fileID: 8031007850761834314, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017293901152095288, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}

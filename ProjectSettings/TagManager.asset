@@ -3,21 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Bat
-  - JoyStick
-  - Bullet
-  - batHB
-  - Gun
-=======
-  - MiniBoss
-  - Gun
-  - JoyStick
-  - Bat
-  - batHB
-  - Bullet
->>>>>>> 0c0d4d50078d6f5656a26edeec6dc944699ce25c
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -27,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Player
+  - 
   - 
   - 
   - 

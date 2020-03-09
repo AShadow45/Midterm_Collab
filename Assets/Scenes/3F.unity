@@ -898,6 +898,7 @@ MonoBehaviour:
   spiderWeb: {fileID: 1284762117}
   webCollider: {fileID: 2046466782}
   aud: {fileID: 1284762118}
+  miniBossBGM: {fileID: 1753853334}
   gun: {fileID: 470989063}
 --- !u!114 &207828644
 MonoBehaviour:
@@ -2190,6 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8698de067a14cdb4b89547032105f65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aud: {fileID: 0}
 --- !u!61 &470989066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7102,6 +7104,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1696032318}
   enemyHealth: {fileID: 1527236129}
   damage: 2
+  aud: {fileID: 1696032319}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!95 &1527236128
 Animator:
   serializedVersion: 3
@@ -7937,6 +7941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea3b4d475f238c4d85a374bef05213c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1696032319 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3326816005216600880, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696032315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733662138
 GameObject:
   m_ObjectHideFlags: 0
@@ -8974,6 +8984,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1696032318}
   enemyHealth: {fileID: 1931810235}
   damage: 2
+  aud: {fileID: 1696032319}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!114 &1931810235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9344,6 +9356,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1696032318}
   enemyHealth: {fileID: 2033117781}
   damage: 2
+  aud: {fileID: 1696032319}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!95 &2033117780
 Animator:
   serializedVersion: 3

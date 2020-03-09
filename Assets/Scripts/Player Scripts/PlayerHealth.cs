@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 10;
     float EndDelay = .1f;
-    
 
     void Start()
     {
@@ -26,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+           
             Die();
             SceneManager.LoadScene("Title");
         }
@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(int dmg) {
         currentHealth -= dmg;
+      
     }
 
     void Die() {
