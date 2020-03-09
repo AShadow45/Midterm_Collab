@@ -19,6 +19,11 @@ public class MiniBoss_Controls : MonoBehaviour
     public int mb_curHealth;
     [Tooltip("Mini Boss Maximum Health")]
     public int mb_maxHealth = 10;
+<<<<<<< HEAD
+    public PlayerHealth playerHealth;
+    public int damage;
+=======
+>>>>>>> e200dfc806b076cc17dc7751406f63ae64f57f60
 
     //.....................................................STAIRWAY 
     [Header("Spider Web")]
@@ -26,13 +31,23 @@ public class MiniBoss_Controls : MonoBehaviour
     public Collider2D webCollider;
     public AudioSource aud;
 
-    [Header("Gun")]
-    public GameObject gun;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         mb_curHealth = mb_maxHealth;
+<<<<<<< HEAD
+        SpawnPoint = GameObject.FindGameObjectWithTag("MiniBoss").transform;
+        InvokeRepeating("Damage", 0, .1f);
+    }
+    
+    void Update()
+    {
+        if (mb_curHealth <= 0)
+        {
+            StartCoroutine(FadeTo(0.0f, 1.5f));
+            webCollider.enabled = false;
+            StartCoroutine(Die());
+=======
 
         gun.SetActive(false);
 
@@ -54,6 +69,7 @@ public class MiniBoss_Controls : MonoBehaviour
 
             }
             //Damage();
+>>>>>>> e200dfc806b076cc17dc7751406f63ae64f57f60
         }
 
         //......................................................ATTACK
@@ -65,6 +81,34 @@ public class MiniBoss_Controls : MonoBehaviour
                 mb_curHealth -= 1;
             }
         }
+<<<<<<< HEAD
+
+        if (col.gameObject.tag == "Player")
+        {
+            playerHealth.currentHealth -= damage;
+        }
+    }
+
+    //void Damage() {
+    //    for (int i = 0; i < webMax; i++) {
+    //       // Instantiate(Webs, SpawnPoint.position, transform.rotation);
+    //        GameObject newBullet = Instantiate(Webs, SpawnPoint.position, Quaternion.identity) as GameObject;
+    //        newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
+    //    }
+        
+    //}
+
+    //spider web fade
+    IEnumerator FadeTo(float aValue, float aTime)
+    {
+        float alpha = spiderWeb.GetComponent<Renderer>().material.color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            spiderWeb.GetComponent<Renderer>().material.color = newColor;
+            aud.Play();
+            yield return null;
+=======
 
 
     void Damage() {
@@ -96,6 +140,7 @@ public class MiniBoss_Controls : MonoBehaviour
                 yield return new WaitForSeconds(1.55f);
                 Destroy(this.gameObject);
             }
+>>>>>>> e200dfc806b076cc17dc7751406f63ae64f57f60
         }
     
 
