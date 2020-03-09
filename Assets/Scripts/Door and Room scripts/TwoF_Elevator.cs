@@ -11,12 +11,17 @@ public class TwoF_Elevator : MonoBehaviour
     public string sceneName;
     Collider2D elevatorCol;
 
+    //black fade
     public Animator anim;
+
     public Text hintText;
+
+    //sounds
     AudioSource aud;
     public AudioClip wrong;
     public AudioClip goUp;
 
+    //for fading bgm
     public AudioSource bgmSource;
     float startVolume = 1;
     bool bgmFade = false;
@@ -32,6 +37,7 @@ public class TwoF_Elevator : MonoBehaviour
     {
         if (generator.GetComponent<generator>().generatorOn == true)
         {
+            // if generator is on --> elevator is usable
             elevatorCol.isTrigger = true;
         }
 
@@ -59,6 +65,7 @@ public class TwoF_Elevator : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // if generator isn't on --> say hint
         if (collision.gameObject.CompareTag("Player"))
         {
             aud.PlayOneShot(wrong);
