@@ -156,5 +156,11 @@ public class PlayerCombat : MonoBehaviour
             weaponNum = 1;
             other.gameObject.SetActive(false);
         }
+
+        if (other.CompareTag("Gun"))
+        {
+            weaponNum = 2;
+            other.gameObject.SetActive(false);
+        }
     }
 }

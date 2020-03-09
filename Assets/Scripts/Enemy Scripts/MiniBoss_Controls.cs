@@ -26,13 +26,20 @@ public class MiniBoss_Controls : MonoBehaviour
     public Collider2D webCollider;
     public AudioSource aud;
 
+    [Header("Gun")]
+    public GameObject gun;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         mb_curHealth = mb_maxHealth;
+
+        gun.SetActive(false);
+        
+
         SpawnPoint = GameObject.FindGameObjectWithTag("MiniBoss").transform;
         InvokeRepeating("Damage", 0, .1f);
-    }
+
     
     void Update()
     {
@@ -41,6 +48,10 @@ public class MiniBoss_Controls : MonoBehaviour
             StartCoroutine(FadeTo(0.0f, 1.5f));
             webCollider.enabled = false;
             StartCoroutine(Die());
+
+            gun.SetActive(true);
+        
+
         }
         //Damage();
     }
