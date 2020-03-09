@@ -850,7 +850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Insert Title Here
+  m_Text: SCR Lab
 --- !u!222 &1910412739
 CanvasRenderer:
   m_ObjectHideFlags: 0
