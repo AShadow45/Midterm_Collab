@@ -2914,6 +2914,16 @@ PrefabInstance:
       propertyPath: enemyHealth
       value: 
       objectReference: {fileID: 2136984533}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 1578367385}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: dmgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
     - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
       propertyPath: m_Name
@@ -4649,6 +4659,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1478238817}
   enemyHealth: {fileID: 527133339}
   damage: 4
+  aud: {fileID: 1578367385}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!50 &527133341
 Rigidbody2D:
   serializedVersion: 4
@@ -8098,6 +8110,16 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1478238817}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 1578367385}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: dmgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
     - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
       propertyPath: m_Name
@@ -11427,6 +11449,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46ae56d65b0bcdc4caed47e503634240, type: 3}
+--- !u!82 &1578367385 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3326816005216600880, guid: 46ae56d65b0bcdc4caed47e503634240,
+    type: 3}
+  m_PrefabInstance: {fileID: 1578367384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1599384130
 GameObject:
   m_ObjectHideFlags: 0
@@ -13227,6 +13255,8 @@ MonoBehaviour:
   playerHealth: {fileID: 1478238817}
   enemyHealth: {fileID: 1943849876}
   damage: 4
+  aud: {fileID: 1578367385}
+  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
 --- !u!50 &1943849878
 Rigidbody2D:
   serializedVersion: 4
@@ -14671,6 +14701,16 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1478238817}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 1578367385}
+    - target: {fileID: 5156791413299562667, guid: b1e142123dcfa06409cdeb728b0c7c6b,
+        type: 3}
+      propertyPath: dmgSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
     - target: {fileID: 5156791413299562669, guid: b1e142123dcfa06409cdeb728b0c7c6b,
         type: 3}
       propertyPath: m_Name

@@ -31,6 +31,8 @@ public class BigBoss_Controls : MonoBehaviour
     public int maxNUM_Minions = 5;
     float spawnRate_Minions; // Delay between minions spawning
 
+   
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,6 +40,7 @@ public class BigBoss_Controls : MonoBehaviour
         bb_Minion_curHealth = bb_Minion_maxHealth;
         curNUM_Minions = maxNUM_Minions;
         InvokeRepeating("SpawnMinions", 0, spawnRate_Minions);
+
     }
     
     void Update()
