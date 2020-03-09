@@ -137,4 +137,13 @@ public class PlayerCombat : MonoBehaviour
             gun1.SetActive(false);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bat"))
+        {
+            weaponNum = 1;
+            other.gameObject.SetActive(false);
+        }
+    }
 }
