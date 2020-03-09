@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3733692660482770789}
   - component: {fileID: 1103040072233997136}
   - component: {fileID: 2177660297791238880}
+  - component: {fileID: -4383394956502844101}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Untagged
@@ -100,3 +101,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4383394956502844101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3066849362054265603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa55f59528c85d44b6191def59eafed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  isChasing: 0
+  detectRad: 6
