@@ -40,7 +40,7 @@ public class BigBoss_Controls : MonoBehaviour
     void SpawnMinions() {
         for (int i = 0; i < maxNUM_Minions; i++)
         {
-
+            float spawnYLocal = Random.Range(-14, 2);
         }
     }
 }
