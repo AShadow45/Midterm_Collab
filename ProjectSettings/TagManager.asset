@@ -14,7 +14,11 @@ TagManager:
   - AttackButton
   - DashButton
   - EnemExplode
+<<<<<<< HEAD
   - MiniBoss
+=======
+  - Gun
+>>>>>>> fa166b6e59e092db772f70deaa4e02f63217c12b
   layers:
   - Default
   - TransparentFX
