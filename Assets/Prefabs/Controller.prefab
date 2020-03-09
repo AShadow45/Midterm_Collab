@@ -1535,6 +1535,7 @@ MonoBehaviour:
   knockback: 300
   dashSpeed: 750
   dashCoolDownTime: 0.5
+  attckButton: {fileID: 5052918578202354127}
 --- !u!1 &5052918578202354127
 GameObject:
   m_ObjectHideFlags: 0
