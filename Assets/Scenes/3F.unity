@@ -2796,12 +2796,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Webs: {fileID: 5199364906187732202, guid: ce5a2a4cd04464a438afc1d86631f0c4, type: 3}
   SpawnPoint: {fileID: 1841105236}
+  webMax: 5
+  speed: 50
   mb_curHealth: 0
   mb_maxHealth: 10
+  playerHealth: {fileID: 687156015}
+  damage: 5
   spiderWeb: {fileID: 72148785}
   webCollider: {fileID: 2142179735}
   aud: {fileID: 72148788}
-  gun: {fileID: 1004924150}
 --- !u!114 &489776245
 MonoBehaviour:
   m_ObjectHideFlags: 0

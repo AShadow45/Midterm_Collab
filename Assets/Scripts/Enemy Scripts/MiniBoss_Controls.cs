@@ -18,7 +18,9 @@ public class MiniBoss_Controls : MonoBehaviour
     [Tooltip("Mini Boss Current Health")]
     public int mb_curHealth;
     [Tooltip("Mini Boss Maximum Health")]
-    public int mb_maxHealth = 10; 
+    public int mb_maxHealth = 10;
+    public PlayerHealth playerHealth;
+    public int damage;
 
     //.....................................................STAIRWAY 
     [Header("Spider Web")]
@@ -26,20 +28,13 @@ public class MiniBoss_Controls : MonoBehaviour
     public Collider2D webCollider;
     public AudioSource aud;
 
-    [Header("Gun")]
-    public GameObject gun;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         mb_curHealth = mb_maxHealth;
-
-        gun.SetActive(false);
-        
-
         SpawnPoint = GameObject.FindGameObjectWithTag("MiniBoss").transform;
         InvokeRepeating("Damage", 0, .1f);
-
+    }
     
     void Update()
     {
@@ -48,10 +43,6 @@ public class MiniBoss_Controls : MonoBehaviour
             StartCoroutine(FadeTo(0.0f, 1.5f));
             webCollider.enabled = false;
             StartCoroutine(Die());
-
-            gun.SetActive(true);
-        
-
         }
         //Damage();
     }
@@ -64,16 +55,21 @@ public class MiniBoss_Controls : MonoBehaviour
         {
             mb_curHealth -= 1;
         }
+
+        if (col.gameObject.tag == "Player")
+        {
+            playerHealth.currentHealth -= damage;
+        }
     }
 
-    void Damage() {
-        for (int i = 0; i < webMax; i++) {
-           // Instantiate(Webs, SpawnPoint.position, transform.rotation);
-            GameObject newBullet = Instantiate(Webs, transform.position, Quaternion.identity) as GameObject;
-            newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
-        }
+    //void Damage() {
+    //    for (int i = 0; i < webMax; i++) {
+    //       // Instantiate(Webs, SpawnPoint.position, transform.rotation);
+    //        GameObject newBullet = Instantiate(Webs, SpawnPoint.position, Quaternion.identity) as GameObject;
+    //        newBullet.GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
+    //    }
         
-    }
+    //}
 
     //spider web fade
     IEnumerator FadeTo(float aValue, float aTime)
