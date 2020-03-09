@@ -1506,8 +1506,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 10
-  dmgSound: {fileID: 8300000, guid: 20d6e014fb70616499c5176d3a6ad0b2, type: 3}
-  dieSound: {fileID: 8300000, guid: c1c9647caa126bc4daaa4c95ccb1a608, type: 3}
 --- !u!114 &459375588116036360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1537,7 @@ MonoBehaviour:
   dashSpeed: 750
   dashCoolDownTime: 0.5
   attckButton: {fileID: 5052918578202354127}
+  batSound: {fileID: 8300000, guid: bdf317e50952c8f48bceeb5373cc7424, type: 3}
 --- !u!82 &3326816005216600880
 AudioSource:
   m_ObjectHideFlags: 0

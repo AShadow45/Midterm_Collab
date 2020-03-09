@@ -17,15 +17,10 @@ public class PlayerCombat : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    
-    
     public VJHandler jsMovement;
     private Vector3 direction;
 
     [Header("Weapons")]
-
-    
-
     public float AttTime = 0.2f;
     public int weaponNum = 1;
     public float gun1Recoil = 200f;
@@ -44,6 +39,7 @@ public class PlayerCombat : MonoBehaviour
 
     [Header("Button")]
     public GameObject attckButton;
+
 
     void Start()
     {
