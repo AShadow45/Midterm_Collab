@@ -17,6 +17,8 @@ public class BigBoss_Controls : MonoBehaviour
     public int bb_curHealth;
     [Tooltip("Big Boss Maximum Health")]
     public int bb_maxHealth;
+    [Tooltip("Minion Current Health")]
+    int bb_Minion_curHealth;
     [Tooltip("Minion Maximum Health")]
     public int bb_Minion_maxHealth = 3;
 
@@ -30,6 +32,8 @@ public class BigBoss_Controls : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bb_curHealth = bb_maxHealth;
+        bb_Minion_curHealth = bb_Minion_maxHealth;
     }
     
     void Update()
@@ -41,6 +45,15 @@ public class BigBoss_Controls : MonoBehaviour
         for (int i = 0; i < maxNUM_Minions; i++)
         {
             float spawnYLocal = Random.Range(-14, 2);
+            var minionSpawn = Instantiate(Minions, new Vector2(77, spawnYLocal), Quaternion.identity);
+        }
+    }
+
+    void MinionDeath()
+    {
+        if (bb_Minion_curHealth <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 }
