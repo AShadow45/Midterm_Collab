@@ -28,9 +28,12 @@ public class EnemyPatrol : MonoBehaviour
     [Tooltip("Positive Y Position")]
     public int yposit;
 
+    SpriteRenderer rend;
+
     void Start()
     {
         yStartPos = transform.position.y;
+        rend = GetComponent<SpriteRenderer>();
     }
     
     void Update()
@@ -38,11 +41,13 @@ public class EnemyPatrol : MonoBehaviour
         if (transform.position.x < xnegat)
         {
             xDirect = 1;
+            rend.flipX = true;
         }
 
         if (transform.position.x > xposit)
         {
             xDirect = -1;
+            rend.flipX = false;
         }
 
         if (transform.position.y < ynegat)

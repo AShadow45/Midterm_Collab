@@ -31,6 +31,7 @@ public class TwoF_Elevator : MonoBehaviour
         elevatorCol = GetComponent<BoxCollider2D>();
         hintText.text = "";
         bgmSource.volume = startVolume;
+        aud = GetComponent<AudioSource>();
     }
 
    void Update()

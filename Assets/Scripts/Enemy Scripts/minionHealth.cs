@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class minionHealth : MonoBehaviour
 {
     [Header("Health Settings")]
     public int ENEM_curHealth;
@@ -12,15 +12,14 @@ public class EnemyHealth : MonoBehaviour
     public GameObject bloodFX;
 
     AudioSource aud;
-    public AudioClip hitSound;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        aud = player.GetComponent<AudioSource>();
+        aud = GetComponent<AudioSource>();
         ENEM_curHealth = ENEM_maxHealth;
     }
-    
+
     void Update()
     {
         if (ENEM_curHealth > ENEM_maxHealth)
@@ -40,14 +39,14 @@ public class EnemyHealth : MonoBehaviour
 
         if (col.gameObject.tag == "batHB")
         {
-            aud.PlayOneShot(hitSound);
+            aud.Play();
             ENEM_curHealth -= player.GetComponent<PlayerCombat>().batDamage;
             GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);
 
         }
         else if (col.gameObject.tag == "Bullet")
         {
-            aud.PlayOneShot(hitSound);
+            aud.Play();
             ENEM_curHealth -= player.GetComponent<PlayerCombat>().gunDamage;
 
             GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);

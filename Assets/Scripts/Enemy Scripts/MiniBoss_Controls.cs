@@ -21,6 +21,7 @@ public class MiniBoss_Controls : MonoBehaviour
     public int mb_maxHealth = 10;
     public PlayerHealth playerHealth;
     public int damage;
+    public GameObject bloodFX;
 
     //.....................................................STAIRWAY 
     [Header("Spider Web")]
@@ -34,6 +35,9 @@ public class MiniBoss_Controls : MonoBehaviour
     bool startFade = false;
 
     public GameObject gun;
+
+    public AudioSource hitAud;
+    public AudioClip dmgSound;
 
     void Start()
     {
@@ -72,15 +76,24 @@ public class MiniBoss_Controls : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Bat")
+        if (col.gameObject.tag == "batHB")
         {
             mb_curHealth -= 2;
+            hitAud.PlayOneShot(dmgSound);
+            GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);
         }
 
+        /*
         if (col.gameObject.tag == "Player")
         {
             playerHealth.currentHealth -= damage;
+            if (col.gameObject.tag == "Player")
+            {
+                playerHealth.currentHealth -= damage;
+                playerAud.PlayOneShot(dmgSound);
+            }
         }
+        */
     }
 
     //void Damage() {

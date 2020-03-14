@@ -11,9 +11,18 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 10;
     float EndDelay = .1f;
 
+    public AudioClip dieSound;
+    public AudioSource aud;
+    public Animator anim;
+
+    SpriteRenderer rend;
+    Collider2D col;
+
     void Start()
     {
         currentHealth = maxHealth;
+        rend = gameObject.GetComponent<SpriteRenderer>();
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
     
     void Update()
@@ -27,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
         {
            
             Die();
-            SceneManager.LoadScene("Title");
+            StartCoroutine(BackToTitle());
         }
 
     }
@@ -38,7 +47,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
     void Die() {
-        Destroy(gameObject, EndDelay + .1f);
+        rend.enabled = false;
+        col.enabled = false;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -47,5 +57,14 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= 2;
         }
+    }
+
+    IEnumerator BackToTitle()
+    {
+        aud.PlayOneShot(dieSound);
+        anim.SetTrigger("fadeOut");
+        yield return new WaitForSeconds(3f);
+
+        SceneManager.LoadScene("Title");
     }
 }

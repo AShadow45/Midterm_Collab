@@ -191,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 2155996540876285063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8404, z: 0}
-  m_LocalScale: {x: 1, y: 0.6788, z: 1}
+  m_LocalScale: {x: 3.0125, y: 0.6788, z: 1}
   m_Children: []
   m_Father: {fileID: 8346664361980568906}
   m_RootOrder: 1
@@ -233,9 +233,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 02cfc2fcfbfde3749914c4f466952eb4, type: 3}
-  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: b5cd7779535e4c24ca8c39d67c996768, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -262,7 +262,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 6594422999987593138}
   m_Layer: 8
   m_Name: Gun1
-  m_TagString: Bat
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,8 +592,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1697785982204616458}
   - component: {fileID: 784823865754964544}
-  - component: {fileID: 1349144252490955626}
-  - component: {fileID: 3533897355395811372}
   m_Layer: 8
   m_Name: BatVisible
   m_TagString: Bat
@@ -610,7 +608,7 @@ Transform:
   m_GameObject: {fileID: 2999930405852278395}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.758, z: 0}
-  m_LocalScale: {x: 1, y: 0.8081, z: 1}
+  m_LocalScale: {x: 3.65, y: 0.8081, z: 1}
   m_Children: []
   m_Father: {fileID: 9223177770859024994}
   m_RootOrder: 0
@@ -653,8 +651,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: 02cfc2fcfbfde3749914c4f466952eb4, type: 3}
-  m_Color: {r: 1, g: 0.51434815, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5e313df2165be6c4696091fce34fdef7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -664,53 +662,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1349144252490955626
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999930405852278395}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!50 &3533897355395811372
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2999930405852278395}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &3083898425662739995
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +903,7 @@ GameObject:
   - component: {fileID: 2852066114442068359}
   - component: {fileID: 702927482043005177}
   - component: {fileID: 4373848754480342424}
+  - component: {fileID: 5226485460965609417}
   m_Layer: 0
   m_Name: BatHB
   m_TagString: batHB
@@ -967,8 +919,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3324972350116168333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.031262547, y: 1.1378214, z: 0}
-  m_LocalScale: {x: 5.524862, y: 0.7893267, z: 1}
+  m_LocalPosition: {x: 0.031263128, y: 1.1378214, z: 0}
+  m_LocalScale: {x: 5.5248613, y: 0.7893267, z: 1}
   m_Children: []
   m_Father: {fileID: 9223177770859024994}
   m_RootOrder: 1
@@ -1035,9 +987,30 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.01670209}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.7282633
+--- !u!50 &5226485460965609417
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3324972350116168333}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: -0.05
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4483597041677560741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,6 +1294,7 @@ GameObject:
   - component: {fileID: 2480967266849441857}
   - component: {fileID: 459375588116036360}
   - component: {fileID: 3326816005216600880}
+  - component: {fileID: 8703822198355451279}
   m_Layer: 8
   m_Name: VJ_player
   m_TagString: Player
@@ -1506,6 +1480,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 10
+  dieSound: {fileID: 8300000, guid: c1c9647caa126bc4daaa4c95ccb1a608, type: 3}
+  aud: {fileID: 3326816005216600880}
+  anim: {fileID: 5597374916027029374}
 --- !u!114 &459375588116036360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,6 +1514,8 @@ MonoBehaviour:
   dashSpeed: 750
   dashCoolDownTime: 0.5
   attckButton: {fileID: 5052918578202354127}
+  batSound: {fileID: 8300000, guid: bdf317e50952c8f48bceeb5373cc7424, type: 3}
+  gunSound: {fileID: 8300000, guid: 80b30bfcc69e0544b83dcc4f3b273519, type: 3}
 --- !u!82 &3326816005216600880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1633,6 +1612,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &8703822198355451279
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483597043012914352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54b3d61a81698b3489d372028743fcc7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5052918578202354127
 GameObject:
   m_ObjectHideFlags: 0

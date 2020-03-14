@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     private Vector3 direction;
 
     [Header("Weapons")]
-    public float AttTime = 0.2f;
+    public float AttTime = 1f;
     public int weaponNum = 1;
     public float gun1Recoil = 200f;
     public float bulletSpeed = 200f;
@@ -40,6 +40,10 @@ public class PlayerCombat : MonoBehaviour
     [Header("Button")]
     public GameObject attckButton;
 
+    AudioSource aud;
+    public AudioClip batSound;
+    public AudioClip gunSound;
+
 
     void Start()
     {
@@ -49,7 +53,8 @@ public class PlayerCombat : MonoBehaviour
         jsMovement = GameObject.FindWithTag("JoyStick").GetComponent<VJHandler>();
 
         attckButton.SetActive(false);
-        
+
+        aud = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -74,6 +79,7 @@ public class PlayerCombat : MonoBehaviour
         }
         if (weaponNum == 2)
         {
+            aud.PlayOneShot(gunSound);
             GameObject bullet = Instantiate(bullet1, gun1Barrel.transform.position, gun1Barrel.transform.rotation);
             GameObject newsmokeFX1 = Instantiate(smokeFX1, gun1Barrel.transform.position, gun1Barrel.transform.rotation);
 
@@ -81,7 +87,7 @@ public class PlayerCombat : MonoBehaviour
             //Bullet add force
             bulletrb.AddForce(gun1Barrel.transform.up * bulletSpeed);
 
-            Destroy(bullet, 2f);
+            Destroy(bullet, 1.2f);
             Destroy(newsmokeFX1, 1f);
             //recoil
             rb.AddForce(-gun1Barrel.transform.up * gun1Recoil);
@@ -107,6 +113,7 @@ public class PlayerCombat : MonoBehaviour
     }
     IEnumerator batAttack()
     {
+        aud.PlayOneShot(batSound);
         batHB.SetActive(true);
         yield return new WaitForSeconds(AttTime);
         batHB.SetActive(false);
@@ -153,7 +160,7 @@ public class PlayerCombat : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if (other.CompareTag("Gun"))
+        else if (other.CompareTag("Gun"))
         {
             weaponNum = 2;
             other.gameObject.SetActive(false);

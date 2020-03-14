@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    GameObject player;
+    PlayerHealth playerHealth;
     public EnemyHealth enemyHealth;
     public int damage;
 
     public AudioSource aud;
     public AudioClip dmgSound;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        aud = player.GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter2D(Collider2D col)
     {

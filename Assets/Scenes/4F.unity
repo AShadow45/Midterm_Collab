@@ -1581,6 +1581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418074612}
+  - component: {fileID: 418074613}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -1603,6 +1604,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &418074613
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418074611}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &459507026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,7 +2596,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.7710023, y: 1.1149144}
+  m_Offset: {x: 3.7710023, y: 0.94623756}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2510,7 +2607,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.542005, y: 1.7701712}
+  m_Size: {x: 15.542005, y: 2.1075249}
   m_EdgeRadius: 0
 --- !u!1 &729520626
 GameObject:
@@ -3320,6 +3417,7 @@ GameObject:
   - component: {fileID: 879124327}
   - component: {fileID: 879124328}
   - component: {fileID: 879124329}
+  - component: {fileID: 879124330}
   m_Layer: 0
   m_Name: Patrol Enemy
   m_TagString: Untagged
@@ -3449,7 +3547,8 @@ MonoBehaviour:
   ENEM_curHealth: 0
   ENEM_maxHealth: 2
   player: {fileID: 1280386282}
-  bloodFX: {fileID: 0}
+  bloodFX: {fileID: 222385952867571373, guid: 8b903f46279c77f4d825390f1de9fecd, type: 3}
+  hitSound: {fileID: 8300000, guid: 85656b54c63036b42aeefff66930d112, type: 3}
 --- !u!114 &879124328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3462,7 +3561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 700fb2e4e49f0c64fa2b904fd47cc821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1280386284}
   enemyHealth: {fileID: 879124327}
   damage: 1
   aud: {fileID: 1280386283}
@@ -3486,6 +3584,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &879124330
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879124322}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &917615097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,7 +3699,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 9.249913, y: 1.1346822}
+  m_Offset: {x: 9.249913, y: 0.78708506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3591,7 +3710,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 26.499826, y: 1.7306356}
+  m_Size: {x: 26.499826, y: 2.42583}
   m_EdgeRadius: 0
 --- !u!1 &918111704
 GameObject:
@@ -3690,7 +3809,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.7259008}
+  m_Offset: {x: 0, y: 0.97622794}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3701,7 +3820,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.38, y: 3.5981987}
+  m_Size: {x: 4.38, y: 5.097544}
   m_EdgeRadius: 0
 --- !u!82 &918111708
 AudioSource:
@@ -4487,18 +4606,6 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1829241389}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1280386284 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2480967266849441857, guid: 46ae56d65b0bcdc4caed47e503634240,
-    type: 3}
-  m_PrefabInstance: {fileID: 1829241389}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280386282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea3b4d475f238c4d85a374bef05213c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1317302508
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5834,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.083704}
+  m_Offset: {x: 0, y: 0.96783876}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5738,7 +5845,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 1.832592}
+  m_Size: {x: 8, y: 2.0643225}
   m_EdgeRadius: 0
 --- !u!1 &1815124318
 GameObject:
@@ -5860,6 +5967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 248801868825633232, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 459375588116036360, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: weaponNum
@@ -5870,6 +5982,61 @@ PrefabInstance:
       propertyPath: attckButton
       value: 
       objectReference: {fileID: 733303989}
+    - target: {fileID: 1697785982204616458, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852066114442068359, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.031262547
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852066114442068359, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1378214
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852066114442068359, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.524862
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852066114442068359, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7893267
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852066114442068359, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999930405852278395, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324972350116168333, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373848754480342424, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06719817
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373848754480342424, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5671981
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373848754480342424, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4483597042696061561, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -5905,6 +6072,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0306c0b75cc994242a5d641d3d946b68,
         type: 3}
+    - target: {fileID: 5226485460965609417, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5953112981647971478, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5963,7 +6135,12 @@ PrefabInstance:
     - target: {fileID: 8031007850761834314, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703822198355451279, guid: 46ae56d65b0bcdc4caed47e503634240,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9017293901152095288, guid: 46ae56d65b0bcdc4caed47e503634240,
         type: 3}

@@ -22,19 +22,25 @@ public class BigBoss_Controls : MonoBehaviour
     [Tooltip("Minion Maximum Health")]
     public int bb_Minion_maxHealth = 3;
 
+    public GameObject player;
+    public GameObject bloodFX;
+
     //.........................................SPAWNING ENEMIES
     [Header("Spawn Settings")]
     public GameObject Minions;
     [Tooltip("Current Number of Minions on Screen")]
     public int curNUM_Minions;
     [Tooltip("Max Number of Minions on Screen")]
-    public int maxNUM_Minions = 5;
+    public int maxNUM_Minions = 10;
     float spawnRate_Minions; // Delay between minions spawning
 
-   
+    public AudioSource aud;
+    public AudioClip hitSound;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         rb = GetComponent<Rigidbody2D>();
         bb_curHealth = bb_maxHealth;
         bb_Minion_curHealth = bb_Minion_maxHealth;
@@ -45,16 +51,19 @@ public class BigBoss_Controls : MonoBehaviour
     
     void Update()
     {
-    //    if (curNUM_Minions < maxNUM_Minions)
-    //    {
-    //        SpawnMinions();
-    //        spawnRate_Minions = 500;
-    //    } else
-    //    {
 
-    //    }
-        
+        if (curNUM_Minions < maxNUM_Minions)
+        {
+           SpawnMinions();
+        }
+       
+
         MinionDeath();
+
+        if (bb_curHealth <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void SpawnMinions() {
@@ -70,7 +79,28 @@ public class BigBoss_Controls : MonoBehaviour
     {
         if (bb_Minion_curHealth <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(Minions.gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.name);
+
+        if (col.gameObject.tag == "batHB")
+        {
+            aud.PlayOneShot(hitSound);
+            bb_curHealth -= player.GetComponent<PlayerCombat>().batDamage;
+            GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);
+
+        }
+        else if (col.gameObject.tag == "Bullet")
+        {
+            bb_curHealth -= player.GetComponent<PlayerCombat>().gunDamage;
+            aud.PlayOneShot(hitSound);
+            GameObject newBlood = Instantiate(bloodFX, col.transform.position, col.transform.rotation);
+
+            Destroy(col.gameObject);
         }
     }
 }
